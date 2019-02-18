@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */; };
+		99A1E14150BFFF113119E959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E477CA9F46662902BF54 /* LaunchScreen.storyboard */; };
+		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
+		99A1E3B183E4318D71230B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A1EBAB73DEA5BCEFFB963A /* Assets.xcassets */; };
+		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
+		99A1E87E1BCEFD13DABDC428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E183B6BA5E6298094822 /* Main.storyboard */; };
+		99A1ED87181ACFEE712117F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E46D1D3AA5153009C5EF /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99A1E26E7993B7E9CA744B15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99A1EFF8742B5BC43D450492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99A1E7FAF260304A675346C3;
+			remoteInfo = Gorilla;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
+		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
+		99A1E46D1D3AA5153009C5EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99A1E4BB927E611A0CC8FEA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A1E6F810BB1CC6DFE72558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99A1EBAB73DEA5BCEFFB963A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99A1EC1B2CB596340A6C639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A1EFADC468062774D09F64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99A1E8C155CF369AAAB72FB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99A1EA6EE177163AC448E258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99A1E3A2541574899EFE93D3 /* Gorilla */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E6F810BB1CC6DFE72558 /* Info.plist */,
+				99A1EBAB73DEA5BCEFFB963A /* Assets.xcassets */,
+				99A1E477CA9F46662902BF54 /* LaunchScreen.storyboard */,
+				99A1E46D1D3AA5153009C5EF /* AppDelegate.swift */,
+				99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */,
+				99A1E183B6BA5E6298094822 /* Main.storyboard */,
+				99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */,
+			);
+			path = Gorilla;
+			sourceTree = "<group>";
+		};
+		99A1E83370F4B87B629973BD /* GorillaTests */ = {
+			isa = PBXGroup;
+			children = (
+				99A1EC1B2CB596340A6C639A /* Info.plist */,
+				99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */,
+			);
+			path = GorillaTests;
+			sourceTree = "<group>";
+		};
+		99A1EA4C60ADCDB9CB022BC3 = {
+			isa = PBXGroup;
+			children = (
+				99A1ED1A9C866F5C964484EB /* Products */,
+				99A1E3A2541574899EFE93D3 /* Gorilla */,
+				99A1E83370F4B87B629973BD /* GorillaTests */,
+			);
+			sourceTree = "<group>";
+		};
+		99A1ED1A9C866F5C964484EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */,
+				99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99A1E7FAF260304A675346C3 /* Gorilla */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99A1E2588B603DC5413AA64D /* Build configuration list for PBXNativeTarget "Gorilla" */;
+			buildPhases = (
+				99A1E37DFB7C3BC8039DA1DD /* Sources */,
+				99A1E8C155CF369AAAB72FB1 /* Frameworks */,
+				99A1E8B1370622DFB779C4EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gorilla;
+			productName = Gorilla;
+			productReference = 99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99A1ECBB4A8C305BE3A4B3CD /* GorillaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99A1E39F4B1454FD4BD293DD /* Build configuration list for PBXNativeTarget "GorillaTests" */;
+			buildPhases = (
+				99A1E5F6C8A8509DB450072F /* Sources */,
+				99A1EA6EE177163AC448E258 /* Frameworks */,
+				99A1E61DD20CCFA0D3430620 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99A1EE7BDCF199D1267EA814 /* PBXTargetDependency */,
+			);
+			name = GorillaTests;
+			productName = GorillaTests;
+			productReference = 99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99A1EFF8742B5BC43D450492 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Galushka.com;
+			};
+			buildConfigurationList = 99A1E6394493AE9BF7FF4C43 /* Build configuration list for PBXProject "Gorilla" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 99A1EA4C60ADCDB9CB022BC3;
+			productRefGroup = 99A1ED1A9C866F5C964484EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99A1E7FAF260304A675346C3 /* Gorilla */,
+				99A1ECBB4A8C305BE3A4B3CD /* GorillaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99A1E61DD20CCFA0D3430620 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99A1E8B1370622DFB779C4EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99A1E3B183E4318D71230B82 /* Assets.xcassets in Resources */,
+				99A1E14150BFFF113119E959 /* LaunchScreen.storyboard in Resources */,
+				99A1E87E1BCEFD13DABDC428 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99A1E37DFB7C3BC8039DA1DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99A1ED87181ACFEE712117F7 /* AppDelegate.swift in Sources */,
+				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
+				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99A1E5F6C8A8509DB450072F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99A1EE7BDCF199D1267EA814 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99A1E7FAF260304A675346C3 /* Gorilla */;
+			targetProxy = 99A1E26E7993B7E9CA744B15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99A1E183B6BA5E6298094822 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99A1EFADC468062774D09F64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99A1E477CA9F46662902BF54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99A1E4BB927E611A0CC8FEA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99A1E07552423A342F0FEEC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gorilla/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.Gorilla;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99A1E0D1E5B264A51F2D1E0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Gorilla/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.Gorilla;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99A1E406E2BE88DA0D6B173B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99A1EADD5DE0D1CB6F01681B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gorilla.app/Gorilla";
+				INFOPLIST_FILE = GorillaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.GorillaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		99A1EB709C8700BEABB02447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gorilla.app/Gorilla";
+				INFOPLIST_FILE = GorillaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.GorillaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		99A1EDEEB391F4BDF869C8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99A1E2588B603DC5413AA64D /* Build configuration list for PBXNativeTarget "Gorilla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99A1E0D1E5B264A51F2D1E0F /* Debug */,
+				99A1E07552423A342F0FEEC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99A1E39F4B1454FD4BD293DD /* Build configuration list for PBXNativeTarget "GorillaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99A1EADD5DE0D1CB6F01681B /* Debug */,
+				99A1EB709C8700BEABB02447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99A1E6394493AE9BF7FF4C43 /* Build configuration list for PBXProject "Gorilla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99A1E406E2BE88DA0D6B173B /* Debug */,
+				99A1EDEEB391F4BDF869C8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */,
+			);
+			currentVersion = 99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */;
+			path = Gorilla.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 99A1EFF8742B5BC43D450492 /* Project object */;
+}
