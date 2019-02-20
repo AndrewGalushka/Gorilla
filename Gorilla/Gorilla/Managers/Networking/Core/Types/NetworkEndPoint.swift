@@ -3,12 +3,14 @@
 // Copyright (c) 2019 Galushka.com. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Alamofire
 
 protocol NetworkEndPoint {
-    var scheme: NetworkSchemeType { get }
-    var baseURL: String { get }
-    var path: String { get }
-    var queryParams: [URLQueryItem]? { get }
     var httpMethod: HTTPMethod { get }
+    var scheme: URLSchemeType { get }
+    var host: String { get }
+    var path: String { get }
+    var queryItems: [URLQueryItem]? { get }
+    var httpHeaders: HTTPHeaders? { get }
 }

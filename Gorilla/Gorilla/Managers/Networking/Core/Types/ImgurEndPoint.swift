@@ -9,7 +9,7 @@ protocol ImgurEndPoint: NetworkEndPoint {
 }
 
 extension ImgurEndPoint {
-    var scheme: NetworkSchemeType {
+    var scheme: URLSchemeType {
         return .https
     }
 }

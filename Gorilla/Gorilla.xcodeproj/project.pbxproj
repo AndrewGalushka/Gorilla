@@ -12,12 +12,11 @@
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
 		99A1E40C1B4F4E481382DFEC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAFCB90DF394B8A8D4AD /* AppCoordinator.swift */; };
-		99A1E4147DEDE0C4BF603097 /* NetworkSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */; };
+		99A1E4147DEDE0C4BF603097 /* URLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5A7E14778C03251D1F8 /* URLSchemeType.swift */; };
 		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
 		99A1E4F0542EE45B08DBCB21 /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAAF423748A31130A6B5 /* AppCoordinatorType.swift */; };
 		99A1E64BB3BDBC887DD8BC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */; };
 		99A1E858D9DE3C12D03E6FBD /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */; };
-		99A1E90091B6BCDDD8AEE2CA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */; };
 		99A1E9227618AE0A77521C01 /* ImgurEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */; };
 		99A1E9BE2FF252AD0DFB5369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */; };
 		99A1EB6CAB5BE93C3D170A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E6C9825437D136CD7DA6 /* Main.storyboard */; };
@@ -44,22 +43,21 @@
 		65326A1405F342768FBAB7A7 /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
 		99A1E02672FA7C60DFB33029 /* NetworkEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentType.swift; sourceTree = "<group>"; };
 		99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
 		99A1E372F8EEF606A207F26B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
 		99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurEndPoint.swift; sourceTree = "<group>"; };
 		99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSchemeType.swift; sourceTree = "<group>"; };
+		99A1E5A7E14778C03251D1F8 /* URLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchemeType.swift; sourceTree = "<group>"; };
 		99A1E6C9825437D136CD7DA6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99A1EAA43E80B90F13EF9CF3 /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		99A1EAAF423748A31130A6B5 /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
 		99A1EAFCB90DF394B8A8D4AD /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A1EF6C8E2B2FAF6278820D /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
 		B3BE44F9BB71BB98D5387021 /* Pods-GorillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,9 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */,
-				99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */,
 				99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */,
-				99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */,
+				99A1E5A7E14778C03251D1F8 /* URLSchemeType.swift */,
 				99A1E02672FA7C60DFB33029 /* NetworkEnvironmentType.swift */,
 				99A1EAA43E80B90F13EF9CF3 /* RequestRouter.swift */,
 			);
@@ -128,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				99A1EA4BB63BC5618A40D781 /* Core */,
+				99A1EDCC9ADAAFBB56AEAD22 /* Imgur */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -178,6 +176,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		99A1EDCC9ADAAFBB56AEAD22 /* Imgur */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Imgur;
+			sourceTree = "<group>";
+		};
 		99A1EF1187EF36DDCDF9C551 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +190,7 @@
 				99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */,
 				99A1E6C9825437D136CD7DA6 /* Main.storyboard */,
 				99A1E372F8EEF606A207F26B /* Info.plist */,
+				99A1EF6C8E2B2FAF6278820D /* Gorilla.xcdatamodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -351,9 +357,8 @@
 				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
 				99A1E858D9DE3C12D03E6FBD /* NetworkEndPoint.swift in Sources */,
-				99A1E90091B6BCDDD8AEE2CA /* HTTPMethod.swift in Sources */,
 				99A1E9227618AE0A77521C01 /* ImgurEndPoint.swift in Sources */,
-				99A1E4147DEDE0C4BF603097 /* NetworkSchemeType.swift in Sources */,
+				99A1E4147DEDE0C4BF603097 /* URLSchemeType.swift in Sources */,
 				99A1EF446CBBFC49DBAA1719 /* NetworkEnvironmentType.swift in Sources */,
 				99A1ED665E78274060394C00 /* RequestRouter.swift in Sources */,
 				99A1E40C1B4F4E481382DFEC /* AppCoordinator.swift in Sources */,
@@ -589,9 +594,7 @@
 		99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */,
 			);
-			currentVersion = 99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */;
 			path = Gorilla.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

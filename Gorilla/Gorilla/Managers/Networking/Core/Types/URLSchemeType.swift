@@ -5,7 +5,7 @@
 
 import Foundation
 
-enum NetworkSchemeType: String {
+enum URLSchemeType: String {
     case http
     case https
 }
