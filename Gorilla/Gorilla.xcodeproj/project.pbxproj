@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40F26133BE1AF0290AF23E6A /* libPods-Gorilla.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3826171F021E72959E494685 /* libPods-Gorilla.a */; };
 		99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */; };
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
+		99A1E40C1B4F4E481382DFEC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAFCB90DF394B8A8D4AD /* AppCoordinator.swift */; };
+		99A1E4147DEDE0C4BF603097 /* NetworkSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */; };
 		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
+		99A1E4F0542EE45B08DBCB21 /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAAF423748A31130A6B5 /* AppCoordinatorType.swift */; };
 		99A1E64BB3BDBC887DD8BC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */; };
+		99A1E858D9DE3C12D03E6FBD /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */; };
+		99A1E90091B6BCDDD8AEE2CA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */; };
+		99A1E9227618AE0A77521C01 /* ImgurEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */; };
 		99A1E9BE2FF252AD0DFB5369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */; };
 		99A1EB6CAB5BE93C3D170A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E6C9825437D136CD7DA6 /* Main.storyboard */; };
+		99A1ED665E78274060394C00 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAA43E80B90F13EF9CF3 /* RequestRouter.swift */; };
+		99A1EF446CBBFC49DBAA1719 /* NetworkEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E02672FA7C60DFB33029 /* NetworkEnvironmentType.swift */; };
+		BC3CE74E0F1D75440F158C25 /* libPods-GorillaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 634C3CC8C8B13FAECEA4C287 /* libPods-GorillaTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +37,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36E9F366590C8B897F6C3BB4 /* Pods-Gorilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.release.xcconfig"; sourceTree = "<group>"; };
+		3826171F021E72959E494685 /* libPods-Gorilla.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gorilla.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D17B3DFD8DD04C161297765 /* Pods-GorillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		634C3CC8C8B13FAECEA4C287 /* libPods-GorillaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GorillaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65326A1405F342768FBAB7A7 /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
+		99A1E02672FA7C60DFB33029 /* NetworkEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentType.swift; sourceTree = "<group>"; };
 		99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
+		99A1E372F8EEF606A207F26B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
+		99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurEndPoint.swift; sourceTree = "<group>"; };
 		99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSchemeType.swift; sourceTree = "<group>"; };
 		99A1E6C9825437D136CD7DA6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99A1EAA43E80B90F13EF9CF3 /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		99A1EAAF423748A31130A6B5 /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
+		99A1EAFCB90DF394B8A8D4AD /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3BE44F9BB71BB98D5387021 /* Pods-GorillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F26133BE1AF0290AF23E6A /* libPods-Gorilla.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +76,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3CE74E0F1D75440F158C25 /* libPods-GorillaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99A1E23C2C4AA4F6EEFF2203 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E3B0F46C4E65F60E1975 /* NetworkEndPoint.swift */,
+				99A1EB2AA0009D9B5F5749BA /* HTTPMethod.swift */,
+				99A1E5551272F9E9606CDFDA /* ImgurEndPoint.swift */,
+				99A1E5A7E14778C03251D1F8 /* NetworkSchemeType.swift */,
+				99A1E02672FA7C60DFB33029 /* NetworkEnvironmentType.swift */,
+				99A1EAA43E80B90F13EF9CF3 /* RequestRouter.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		99A1E3584A8CD62644A7DF29 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +127,17 @@
 		99A1E8418E05FF5ABF364AC0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				99A1EA4BB63BC5618A40D781 /* Core */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		99A1EA4BB63BC5618A40D781 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E23C2C4AA4F6EEFF2203 /* Types */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		99A1EA4C60ADCDB9CB022BC3 = {
@@ -97,6 +146,8 @@
 				99A1ED1A9C866F5C964484EB /* Products */,
 				99A1E3A2541574899EFE93D3 /* Gorilla */,
 				99A1E83370F4B87B629973BD /* GorillaTests */,
+				F996C3B4A3B4C961FE5DE19B /* Pods */,
+				CAEA4E8919278BF716E1E00F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +155,18 @@
 			isa = PBXGroup;
 			children = (
 				99A1E1235B2B788E6FEA365E /* AppDelegate.swift */,
+				99A1ED013C3044D2A13155B4 /* AppCoordinator */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		99A1ED013C3044D2A13155B4 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				99A1EAFCB90DF394B8A8D4AD /* AppCoordinator.swift */,
+				99A1EAAF423748A31130A6B5 /* AppCoordinatorType.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		99A1ED1A9C866F5C964484EB /* Products */ = {
@@ -123,8 +184,29 @@
 				99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */,
 				99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */,
 				99A1E6C9825437D136CD7DA6 /* Main.storyboard */,
+				99A1E372F8EEF606A207F26B /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CAEA4E8919278BF716E1E00F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3826171F021E72959E494685 /* libPods-Gorilla.a */,
+				634C3CC8C8B13FAECEA4C287 /* libPods-GorillaTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F996C3B4A3B4C961FE5DE19B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65326A1405F342768FBAB7A7 /* Pods-Gorilla.debug.xcconfig */,
+				36E9F366590C8B897F6C3BB4 /* Pods-Gorilla.release.xcconfig */,
+				5D17B3DFD8DD04C161297765 /* Pods-GorillaTests.debug.xcconfig */,
+				B3BE44F9BB71BB98D5387021 /* Pods-GorillaTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99A1E2588B603DC5413AA64D /* Build configuration list for PBXNativeTarget "Gorilla" */;
 			buildPhases = (
+				1A3731152ADAEC26146215EB /* [CP] Check Pods Manifest.lock */,
 				99A1E37DFB7C3BC8039DA1DD /* Sources */,
 				99A1E8C155CF369AAAB72FB1 /* Frameworks */,
 				99A1E8B1370622DFB779C4EF /* Resources */,
@@ -151,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99A1E39F4B1454FD4BD293DD /* Build configuration list for PBXNativeTarget "GorillaTests" */;
 			buildPhases = (
+				19465ADED11A24E6A346D2AC /* [CP] Check Pods Manifest.lock */,
 				99A1E5F6C8A8509DB450072F /* Sources */,
 				99A1EA6EE177163AC448E258 /* Frameworks */,
 				99A1E61DD20CCFA0D3430620 /* Resources */,
@@ -211,6 +295,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19465ADED11A24E6A346D2AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GorillaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A3731152ADAEC26146215EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gorilla-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99A1E37DFB7C3BC8039DA1DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -219,6 +350,14 @@
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
 				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
+				99A1E858D9DE3C12D03E6FBD /* NetworkEndPoint.swift in Sources */,
+				99A1E90091B6BCDDD8AEE2CA /* HTTPMethod.swift in Sources */,
+				99A1E9227618AE0A77521C01 /* ImgurEndPoint.swift in Sources */,
+				99A1E4147DEDE0C4BF603097 /* NetworkSchemeType.swift in Sources */,
+				99A1EF446CBBFC49DBAA1719 /* NetworkEnvironmentType.swift in Sources */,
+				99A1ED665E78274060394C00 /* RequestRouter.swift in Sources */,
+				99A1E40C1B4F4E481382DFEC /* AppCoordinator.swift in Sources */,
+				99A1E4F0542EE45B08DBCB21 /* AppCoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +382,7 @@
 /* Begin XCBuildConfiguration section */
 		99A1E07552423A342F0FEEC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E9F366590C8B897F6C3BB4 /* Pods-Gorilla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gorilla/Resources/Info.plist;
@@ -256,6 +396,7 @@
 		};
 		99A1E0D1E5B264A51F2D1E0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65326A1405F342768FBAB7A7 /* Pods-Gorilla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gorilla/Resources/Info.plist;
@@ -330,6 +471,7 @@
 		};
 		99A1EADD5DE0D1CB6F01681B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D17B3DFD8DD04C161297765 /* Pods-GorillaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gorilla.app/Gorilla";
 				INFOPLIST_FILE = GorillaTests/Info.plist;
@@ -344,6 +486,7 @@
 		};
 		99A1EB709C8700BEABB02447 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3BE44F9BB71BB98D5387021 /* Pods-GorillaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gorilla.app/Gorilla";
 				INFOPLIST_FILE = GorillaTests/Info.plist;
