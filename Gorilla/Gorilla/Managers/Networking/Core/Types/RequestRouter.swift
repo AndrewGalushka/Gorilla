@@ -26,7 +26,7 @@ extension RequestRouter {
         urlComponents.path = endPoint.path
         urlComponents.queryItems = endPoint.queryItems
 
-        let request = try MutableURLRequest(url: urlComponents, method: endPoint.httpMethod, headers: endPoint.httpHeaders)
+        let request = try URLRequest(url: urlComponents, method: endPoint.httpMethod, headers: endPoint.httpHeaders)
 
         return request
     }

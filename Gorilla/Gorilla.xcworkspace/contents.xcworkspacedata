@@ -4,6 +4,18 @@
    <FileRef
       location = "group:Gorilla.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:"
+      name = "Products">
+      <FileRef
+         location = "build:Gorilla.app"
+         assignedFileDataType = "com.apple.application-bundle">
+      </FileRef>
+      <FileRef
+         location = "build:GorillaTests.xctest"
+         assignedFileDataType = "com.apple.xcode.cfbundle">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
