@@ -68,7 +68,7 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 
 # AppCode
-.idea
+.idea/
 
 # Other
 IDEWorkspaceChecks.plist
