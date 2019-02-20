@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E25221D94130037C19B /* AppCoordinator.swift */; };
+		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
 		99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */; };
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DF59E25221D94130037C19B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8DF59E26221D94130037C19B /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
 		99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		99A1E3584A8CD62644A7DF29 /* Managers */ = {
+		8DF59E24221D94130037C19B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				99A1E8418E05FF5ABF364AC0 /* Networking */,
+				8DF59E25221D94130037C19B /* AppCoordinator.swift */,
+				8DF59E26221D94130037C19B /* AppCoordinatorType.swift */,
 			);
-			path = Managers;
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 		99A1E3A2541574899EFE93D3 /* Gorilla */ = {
@@ -71,7 +76,6 @@
 				99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */,
 				99A1EB1DE739821150785C1D /* Main */,
 				99A1EF1187EF36DDCDF9C551 /* Resources */,
-				99A1E3584A8CD62644A7DF29 /* Managers */,
 			);
 			path = Gorilla;
 			sourceTree = "<group>";
@@ -82,13 +86,6 @@
 				99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */,
 			);
 			path = GorillaTests;
-			sourceTree = "<group>";
-		};
-		99A1E8418E05FF5ABF364AC0 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		99A1EA4C60ADCDB9CB022BC3 = {
@@ -103,6 +100,7 @@
 		99A1EB1DE739821150785C1D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8DF59E24221D94130037C19B /* AppCoordinator */,
 				99A1E1235B2B788E6FEA365E /* AppDelegate.swift */,
 			);
 			path = Main;
@@ -216,9 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */,
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
 				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
+				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
