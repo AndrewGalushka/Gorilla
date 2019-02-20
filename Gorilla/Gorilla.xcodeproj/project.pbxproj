@@ -12,10 +12,16 @@
 		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
 		908A6021110A538AFB3221BD /* Pods_GorillaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */; };
 		99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */; };
+		99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */; };
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
+		99A1E366FD55B08F2F4F7B95 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E118F8736092EEC0BEFC /* RequestRouter.swift */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
 		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
+		99A1E45605A4045951F89690 /* ImgureClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EEAF9A0C80224BA012E6 /* ImgureClient.swift */; };
+		99A1E5DD704C353031CADB3F /* NetworkEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */; };
 		99A1E64BB3BDBC887DD8BC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */; };
+		99A1E76B71A4D0ABFAF022F2 /* ImgurEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1ECD7A3C4062A17628918 /* ImgurEndPoint.swift */; };
+		99A1E887B3210114EE7CD05D /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */; };
 		99A1E9BE2FF252AD0DFB5369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */; };
 		99A1EB6CAB5BE93C3D170A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E6C9825437D136CD7DA6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,13 +46,19 @@
 		9222F2CED78881D018D1A98B /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
 		99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
+		99A1E118F8736092EEC0BEFC /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
+		99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchemeType.swift; sourceTree = "<group>"; };
 		99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A1E6C9825437D136CD7DA6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentType.swift; sourceTree = "<group>"; };
 		99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99A1ECD7A3C4062A17628918 /* ImgurEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurEndPoint.swift; sourceTree = "<group>"; };
+		99A1EEAF9A0C80224BA012E6 /* ImgureClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgureClient.swift; sourceTree = "<group>"; };
+		99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
 		CB332D6B9D1BB93948310378 /* Pods-Gorilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +111,23 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		99A1E25431FACD5D4BFA2846 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				99A1EAC6D09A896034832CC8 /* Networking */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		99A1E2C01C982D801631F0F8 /* Imgur */ = {
+			isa = PBXGroup;
+			children = (
+				99A1EEAF9A0C80224BA012E6 /* ImgureClient.swift */,
+				99A1ECD7A3C4062A17628918 /* ImgurEndPoint.swift */,
+			);
+			path = Imgur;
+			sourceTree = "<group>";
+		};
 		99A1E3A2541574899EFE93D3 /* Gorilla */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +135,20 @@
 				99A1EA8AABAE8CFE89C46C1E /* ViewController.swift */,
 				99A1EB1DE739821150785C1D /* Main */,
 				99A1EF1187EF36DDCDF9C551 /* Resources */,
+				99A1E25431FACD5D4BFA2846 /* Managers */,
 			);
 			path = Gorilla;
+			sourceTree = "<group>";
+		};
+		99A1E6BA02FCE4FFB3EABDA4 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E118F8736092EEC0BEFC /* RequestRouter.swift */,
+				99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */,
+				99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */,
+				99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		99A1E83370F4B87B629973BD /* GorillaTests */ = {
@@ -129,6 +170,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		99A1EAC6D09A896034832CC8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				99A1EC2B80B3A319E87DAD58 /* Core */,
+				99A1E2C01C982D801631F0F8 /* Imgur */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		99A1EB1DE739821150785C1D /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +186,14 @@
 				99A1E1235B2B788E6FEA365E /* AppDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		99A1EC2B80B3A319E87DAD58 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E6BA02FCE4FFB3EABDA4 /* Types */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		99A1ED1A9C866F5C964484EB /* Products */ = {
@@ -323,6 +381,12 @@
 				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
+				99A1E366FD55B08F2F4F7B95 /* RequestRouter.swift in Sources */,
+				99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */,
+				99A1E887B3210114EE7CD05D /* NetworkEndPoint.swift in Sources */,
+				99A1E5DD704C353031CADB3F /* NetworkEnvironmentType.swift in Sources */,
+				99A1E45605A4045951F89690 /* ImgureClient.swift in Sources */,
+				99A1E76B71A4D0ABFAF022F2 /* ImgurEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
