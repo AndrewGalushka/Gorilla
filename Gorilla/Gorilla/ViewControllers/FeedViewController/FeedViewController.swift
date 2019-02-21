@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class FeedViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -88,6 +88,5 @@ extension FeedViewController: UICollectionViewDelegate {
 
 extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
     }
 }

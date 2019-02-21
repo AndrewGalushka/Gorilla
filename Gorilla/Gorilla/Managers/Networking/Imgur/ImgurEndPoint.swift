@@ -8,7 +8,7 @@ import Alamofire
 
 protocol ImgurEndPoint: NetworkEndPoint {
     var clientID: String { get }
-    var clientSecret: String { get }
+//    var clientSecret: String { get }
 }
 
 extension ImgurEndPoint {
