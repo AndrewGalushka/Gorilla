@@ -6,7 +6,8 @@ target 'Gorilla' do
   use_frameworks!
 
   pod 'Alamofire'
-
+  pod 'RxSwift'
+  
   # Pods for Gorilla
 
   target 'GorillaTests' do
