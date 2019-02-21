@@ -15,7 +15,7 @@
 		99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */; };
 		99A1E249AA96A82E28F7FBA5 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E819B96C79383A604FC1 /* JSONEncodable.swift */; };
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
-		99A1E366FD55B08F2F4F7B95 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E118F8736092EEC0BEFC /* RequestRouter.swift */; };
+		99A1E366FD55B08F2F4F7B95 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E118F8736092EEC0BEFC /* RequestBuilder.swift */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
 		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
 		99A1E45605A4045951F89690 /* ImgureClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EEAF9A0C80224BA012E6 /* ImgureClient.swift */; };
@@ -50,7 +50,7 @@
 		9222F2CED78881D018D1A98B /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
 		99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
-		99A1E118F8736092EEC0BEFC /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		99A1E118F8736092EEC0BEFC /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
 		99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchemeType.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		99A1E6BA02FCE4FFB3EABDA4 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				99A1E118F8736092EEC0BEFC /* RequestRouter.swift */,
+				99A1E118F8736092EEC0BEFC /* RequestBuilder.swift */,
 				99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */,
 				99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */,
 				99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */,
@@ -400,7 +400,7 @@
 				99A1E06F38C4ABD0D03FD1CB /* ViewController.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
-				99A1E366FD55B08F2F4F7B95 /* RequestRouter.swift in Sources */,
+				99A1E366FD55B08F2F4F7B95 /* RequestBuilder.swift in Sources */,
 				99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */,
 				99A1E887B3210114EE7CD05D /* NetworkEndPoint.swift in Sources */,
 				99A1E5DD704C353031CADB3F /* NetworkEnvironmentType.swift in Sources */,
