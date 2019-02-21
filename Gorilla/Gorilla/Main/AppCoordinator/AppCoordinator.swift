@@ -17,8 +17,7 @@ class AppCoordinator: AppCoordinatorType {
     }
 
     func start() {
-        let rootVC = UIViewController()
-        rootVC.view.backgroundColor = .red
+        let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: FeedViewController.self)) as! FeedViewController
 
         window.rootViewController = rootVC
         window.makeKeyAndVisible()

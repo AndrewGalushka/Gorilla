@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol ImgurEndPoint: NetworkEndPoint {
     var clientID: String { get }
@@ -11,7 +12,14 @@ protocol ImgurEndPoint: NetworkEndPoint {
 }
 
 extension ImgurEndPoint {
+    var clientID: String {
+        return "6a1d17a3a133ad8"
+    }
+
     var scheme: URLSchemeType {
         return .https
     }
+
+    var host: String { return "api.imgur.com/3/" }
+    var httpHeaders: HTTPHeaders? { return ["Authorization": "Client-ID \(clientID)"] }
 }

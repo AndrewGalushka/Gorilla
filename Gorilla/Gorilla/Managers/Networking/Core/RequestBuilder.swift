@@ -5,13 +5,14 @@
 
 import Alamofire
 import Foundation
+import UIKit
 
-protocol RequestRouter: URLRequestConvertible {
+protocol RequestBuilder: class, URLRequestConvertible {
     var endPoint: NetworkEndPoint { get }
     var baseURLComponents: URLComponents? { get }
 }
 
-extension RequestRouter {
+extension RequestBuilder {
     public func asURLRequest() throws -> URLRequest {
         var urlComponents: URLComponents
 
