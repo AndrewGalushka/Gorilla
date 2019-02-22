@@ -354,6 +354,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = Galushka.com;
+				TargetAttributes = {
+					99A1E7FAF260304A675346C3 = {
+						DevelopmentTeam = YDDE2DY87F;
+					};
+				};
 			};
 			buildConfigurationList = 99A1E6394493AE9BF7FF4C43 /* Build configuration list for PBXProject "Gorilla" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -516,6 +521,7 @@
 			baseConfigurationReference = CB332D6B9D1BB93948310378 /* Pods-Gorilla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Gorilla/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.Gorilla;
@@ -530,6 +536,7 @@
 			baseConfigurationReference = 9222F2CED78881D018D1A98B /* Pods-Gorilla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YDDE2DY87F;
 				INFOPLIST_FILE = Gorilla/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Galushka.com.Gorilla;

@@ -18,12 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ti4-GT-nLE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-FO-5X3">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QTs-iF-CUF">
                                     <size key="itemSize" width="50" height="50"/>
@@ -37,18 +33,14 @@
                         <color key="backgroundColor" red="0.21568627450980393" green="0.25098039215686274" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cE8-FO-5X3" secondAttribute="bottom" id="7Va-0o-haM"/>
-                            <constraint firstItem="ti4-GT-nLE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IGm-R3-BIP"/>
-                            <constraint firstItem="cE8-FO-5X3" firstAttribute="top" secondItem="ti4-GT-nLE" secondAttribute="bottom" id="KGA-uA-xGW"/>
+                            <constraint firstItem="cE8-FO-5X3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jil-mM-Xt3"/>
                             <constraint firstItem="cE8-FO-5X3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Thx-S4-JTo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cE8-FO-5X3" secondAttribute="trailing" id="tIT-c5-tuF"/>
-                            <constraint firstItem="ti4-GT-nLE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wR2-Zj-FOh"/>
-                            <constraint firstItem="ti4-GT-nLE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xHr-ed-Hdi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="cE8-FO-5X3" id="1qe-0L-V9O"/>
-                        <outlet property="searchBar" destination="ti4-GT-nLE" id="GpB-dr-wLF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

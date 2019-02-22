@@ -11,8 +11,8 @@ import Alamofire
 import Kingfisher
 
 class FeedViewController: UIViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private var searchController: UISearchController?
     
     var viewModels = [FeedCollectionImageViewCellViewModel]()
     
@@ -21,13 +21,34 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        searchBar.delegate = self
+    
+        configureSearchItem()
+        configureNavigationView()
+        configureCollectionView()
+    }
+
+    private func configureSearchItem() {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController?.definesPresentationContext = true
+        searchController?.searchBar.delegate = self
+        searchController?.searchBar.placeholder = "Search"
+        searchController?.obscuresBackgroundDuringPresentation = false
+        navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.searchController = searchController
+    }
+    
+    private func configureNavigationView() {
+        navigationItem.title = "Feed"
+        navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func configureCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
     }
-
+    
     enum CollectionViewLayoutType {
         case small
         case mid
