@@ -128,6 +128,10 @@ extension FeedViewController: UICollectionViewDelegate {
             self.currentLayoutType = .small
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.searchController?.searchBar.resignFirstResponder()
+    }
 }
 
 extension FeedViewController: UISearchBarDelegate {
