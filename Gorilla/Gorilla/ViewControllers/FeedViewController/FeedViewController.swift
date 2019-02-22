@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class FeedViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -67,9 +68,26 @@ extension FeedViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath) as! FeedCollectionImageViewCell
+        cell.configure(viewModel: viewModels[indexPath.row])
         cell.contentView.backgroundColor = UIColor.randomColor()
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if let cell = cell as? FeedCollectionImageViewCell, let cellViewModel = cell.viewModel, let relatedSearchedVM = searchedResults.first(where: { $0.identifier == cellViewModel.identifier}) {
+            
+            KingfisherManager.shared.downloader.downloadImage(with: relatedSearchedVM.imageURL) { result in
+                
+                switch result {
+                case .success(let imageLoadingResult):
+                    cellViewModel.imageURL.value = imageLoadingResult.image
+                case .failure(let error):
+                    print("/n URL=\(relatedSearchedVM.imageURL) ERROR=\(error.localizedDescription)/n")
+                }
+            }
+        }
     }
 }
 
@@ -116,6 +134,7 @@ extension FeedViewController: UISearchBarDelegate {
         } else {
             self.viewModels.removeAll()
             self.searchedResults.removeAll()
+            self.collectionView.reloadData()
         }
     }
     
