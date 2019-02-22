@@ -17,8 +17,10 @@ class AppCoordinator: AppCoordinatorType {
     }
 
     func start() {
-        let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: FeedViewController.self)) as! FeedViewController
-
+        let feedVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: FeedViewController.self)) as! FeedViewController
+        let rootVC = UINavigationController(rootViewController: feedVC)
+        
+        
         window.rootViewController = rootVC
         window.makeKeyAndVisible()
     }
