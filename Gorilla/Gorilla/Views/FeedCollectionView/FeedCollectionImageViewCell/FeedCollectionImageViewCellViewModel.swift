@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class FeedCollectionImageViewCellViewModel {
+    let identifier: String
+    var imageURL: Variable<UIImage?> = Variable(nil)
     
+    init(identifier: String) {
+        self.identifier = identifier
+    }
 }

@@ -13,6 +13,11 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModels = [FeedCollectionImageViewCellViewModel]()
+    
+    private typealias SearchedResult = (identifier: String, imageURL: URL)
+    private var searchedResults = [SearchedResult]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,11 +62,11 @@ class FeedViewController: UIViewController {
 
 extension FeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath) as! FeedCollectionImageViewCell
         cell.contentView.backgroundColor = UIColor.randomColor()
         
         return cell
@@ -88,5 +93,62 @@ extension FeedViewController: UICollectionViewDelegate {
 
 extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let searchBarText = searchBar.text, !searchBarText.isEmpty {
+            let gallerySearchRequest = ImgurGetGallerySearchEndPoint()
+            gallerySearchRequest.query = searchBarText
+            gallerySearchRequest.mediaContentType = .jpg
+            
+            if let urlRequest = try? ImgurRequestBuilder(endPoint: gallerySearchRequest).asURLRequest() {
+                
+                Alamofire.request(urlRequest).responseJSON { (response) in
+                    
+                    switch response.result {
+                    case .success(let json as [String: Any]):
+                        self.updateViewModels(jsonDict: json)
+                    case .success(_):
+                        self.updateViewModels(jsonDict: nil)
+                    case .failure(_):
+                        self.updateViewModels(jsonDict: nil)
+                    }
+                }
+            }
+        } else {
+            self.viewModels.removeAll()
+            self.searchedResults.removeAll()
+        }
+    }
+    
+    func updateViewModels(jsonDict: [String: Any]?) {
+        
+        guard
+            let jsonDict = jsonDict,
+            let results = jsonDict["data"] as? [[String: Any]]
+        else {
+            self.viewModels.removeAll()
+            self.searchedResults.removeAll()
+            return
+        }
+        
+        var viewModels = [FeedCollectionImageViewCellViewModel]()
+        var searchedResults = [SearchedResult]()
+        
+        for result in results {
+
+            guard let identifier = result["id"] as? String else { continue }
+            
+            if let images = result["images"] as? [[String: Any]],
+                let firstImage = images.first,
+                let imageUrlString = firstImage["link"] as? String,
+                let imageUrl = URL(string: imageUrlString) {
+                
+                viewModels.append(FeedCollectionImageViewCellViewModel(identifier: identifier))
+                searchedResults.append(SearchedResult(identifier, imageUrl))
+            }
+        }
+        
+        self.viewModels = viewModels
+        self.searchedResults = searchedResults
+        collectionView.reloadData()
     }
 }

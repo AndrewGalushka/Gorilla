@@ -6,26 +6,44 @@
 import Foundation
 import Alamofire
 
-class ImgurGetGallerySearchRequest: ImgurEndPoint {
+class ImgurGetGallerySearchEndPoint: ImgurEndPoint {
     var httpMethod: HTTPMethod = .get
     
     var path: String {
-        return "gallery/search"
+        return "/3/gallery/search"
     }
     
     var queryItems: [URLQueryItem]? {
-        return [URLQueryItem(name: "q", value: query)]
+        var queryItems = [URLQueryItem]()
+        queryItems.append(URLQueryItem(name: "q", value: query))
+        
+        if let mediaContentType = mediaContentType {
+            queryItems.append(URLQueryItem(name: "q_type", value: mediaContentType.rawValue))
+        }
+        
+        return queryItems
     }
     
     var query = ""
+    var mediaContentType: MediaConentType? = nil
 }
 
-extension ImgurGetGallerySearchRequest {
+extension ImgurGetGallerySearchEndPoint {
     
     enum SortType: String {
         case time
         case viral
         case top
     }
+    
+    enum MediaConentType: String {
+        case jpg
+        case png
+        case gif
+        case anigif
+        case album
+    }
+    
+//    q_type    Show results for any file type, jpg | png | gif | anigif (animated gif) | album
 }
 

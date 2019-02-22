@@ -24,11 +24,15 @@ extension RequestBuilder {
             urlComponents.scheme = endPoint.scheme.rawValue
         }
 
-        urlComponents.path = endPoint.path
+        urlComponents.path.append(endPoint.path)
         urlComponents.queryItems = endPoint.queryItems
 
-        let request = try URLRequest(url: urlComponents, method: endPoint.httpMethod, headers: endPoint.httpHeaders)
-
-        return request
+        do {
+            let request = try URLRequest(url: urlComponents, method: endPoint.httpMethod, headers: endPoint.httpHeaders)
+            
+            return request
+        } catch (let error) {
+            throw error
+        }
     }
 }

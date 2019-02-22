@@ -20,6 +20,11 @@ extension ImgurEndPoint {
         return .https
     }
 
-    var host: String { return "api.imgur.com/3/" }
-    var httpHeaders: HTTPHeaders? { return ["Authorization": "Client-ID \(clientID)"] }
+    var host: String { return "api.imgur.com" }
+    var path: String { return "/3" }
+    
+    var httpHeaders: HTTPHeaders? {
+        return ["authorization": "Client-ID \(clientID)",
+                "Content-Type": "application/json"]
+    }
 }

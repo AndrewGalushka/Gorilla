@@ -10,3 +10,11 @@ import Foundation
 
 class FeedViewControllerSearchInteractor {
 }
+
+extension FeedViewControllerSearchInteractor {
+    
+    struct SearchedGalleryItem {
+        let identifier: String
+        let imageURL: String
+    }
+}
