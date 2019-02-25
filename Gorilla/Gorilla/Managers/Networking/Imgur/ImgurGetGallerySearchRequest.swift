@@ -21,14 +21,27 @@ class ImgurGetGallerySearchEndPoint: ImgurEndPoint {
             queryItems.append(URLQueryItem(name: "q_type", value: mediaContentType.rawValue))
         }
         
+        if let size = size {
+            queryItems.append(URLQueryItem(name: "q_size_px", value: size.rawValue) )
+        }
+        
         return queryItems
     }
     
     var query = ""
     var mediaContentType: MediaConentType? = nil
+    var size: SizeType? = nil
 }
 
 extension ImgurGetGallerySearchEndPoint {
+    
+    enum SizeType: String {
+        case small = "small"
+        case medium = "med"
+        case big = "big"
+        case large = "lrg"
+        case huge = "huge"
+    }
     
     enum SortType: String {
         case time
@@ -43,7 +56,5 @@ extension ImgurGetGallerySearchEndPoint {
         case anigif
         case album
     }
-    
-//    q_type    Show results for any file type, jpg | png | gif | anigif (animated gif) | album
 }
 
