@@ -129,7 +129,7 @@ extension FeedViewController: UICollectionViewDelegate {
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchController?.searchBar.resignFirstResponder()
     }
 }
@@ -141,6 +141,7 @@ extension FeedViewController: UISearchBarDelegate {
             let gallerySearchRequest = ImgurGetGallerySearchEndPoint()
             gallerySearchRequest.query = searchBarText
             gallerySearchRequest.mediaContentType = .jpg
+            gallerySearchRequest.size = .small
             
             if let urlRequest = try? ImgurRequestBuilder(endPoint: gallerySearchRequest).asURLRequest() {
                 
