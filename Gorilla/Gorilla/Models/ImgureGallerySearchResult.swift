@@ -55,10 +55,6 @@ extension ImgureGallerySearchResult.Post.Image {
         case imageGIF = "image/gif"
         case videoMP4 = "video/mp4"
         
-        enum CodingKeys: String, CodingKey {
-            case type
-        }
-        
         init(from decoder: Decoder) throws {
             let singleValueContainer = try decoder.singleValueContainer()
             let stringValue = try singleValueContainer.decode(String.self)

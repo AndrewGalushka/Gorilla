@@ -19,6 +19,13 @@ class FeedViewController: UIViewController {
     private typealias SearchedResult = (identifier: String, imageURL: URL)
     private var searchedResults = [SearchedResult]()
     
+    private var imageDownloadingDispatchQueue: OperationQueue {
+        let dispatchQueue = OperationQueue()
+        dispatchQueue.maxConcurrentOperationCount = 5
+        
+        return dispatchQueue
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -44,6 +51,7 @@ class FeedViewController: UIViewController {
     }
     
     private func configureCollectionView() {
+        collectionView.setCollectionViewLayout(self.bigLayout, animated: false)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
@@ -55,7 +63,7 @@ class FeedViewController: UIViewController {
         case big
     }
     
-    var currentLayoutType: CollectionViewLayoutType = .small
+    var currentLayoutType: CollectionViewLayoutType = .big
     
     var smallLayout: UICollectionViewFlowLayout {
         let flowLayout = UICollectionViewFlowLayout()
@@ -80,6 +88,21 @@ class FeedViewController: UIViewController {
         
         return flowLayout
     }
+
+    func presentErrorAlert(error: Error) {
+
+        var presentingViewController: UIViewController
+
+        if let presentedVC = presentedViewController {
+            presentingViewController = presentedVC
+        } else {
+            presentingViewController = self
+        }
+
+        let alertController = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle:
+        .alert)
+        alertController.addAction( UIAlertAction(title: "OK", style: .cancel))
+        presentingViewController.present(alertController, animated: true)}
 }
 
 extension FeedViewController: UICollectionViewDataSource {
@@ -99,15 +122,26 @@ extension FeedViewController: UICollectionViewDataSource {
         
         if let cell = cell as? FeedCollectionImageViewCell, let cellViewModel = cell.viewModel, let relatedSearchedVM = searchedResults.first(where: { $0.identifier == cellViewModel.identifier}) {
             
-            KingfisherManager.shared.downloader.downloadImage(with: relatedSearchedVM.imageURL) { result in
+            self.imageDownloadingDispatchQueue.addOperation {
                 
-                switch result {
-                case .success(let imageLoadingResult):
-                    cellViewModel.imageURL.value = imageLoadingResult.image
-                case .failure(let error):
-                    print("/n URL=\(relatedSearchedVM.imageURL) ERROR=\(error.localizedDescription)/n")
+                let semaphore = DispatchSemaphore(value: 0)
+                
+                KingfisherManager.shared.downloader.downloadImage(with: relatedSearchedVM.imageURL) { result in
+                    
+                    switch result {
+                    case .success(let imageLoadingResult):
+                        cellViewModel.imageURL.value = imageLoadingResult.image
+                    case .failure(let error):
+                        print("/n URL=\(relatedSearchedVM.imageURL) ERROR=\(error.localizedDescription)/n")
+                    }
+                    
+                    semaphore.signal()
                 }
+                
+               _ = semaphore.wait(timeout: DispatchTime.now() + 10.0)
             }
+            
+            
         }
     }
 }
@@ -141,29 +175,31 @@ extension FeedViewController: UISearchBarDelegate {
             let gallerySearchRequest = ImgurGetGallerySearchEndPoint()
             gallerySearchRequest.query = searchBarText
             gallerySearchRequest.mediaContentType = .jpg
-            gallerySearchRequest.size = .small
+            gallerySearchRequest.size = .big
             
             if let urlRequest = try? ImgurRequestBuilder(endPoint: gallerySearchRequest).asURLRequest() {
                 
-                Alamofire.request(urlRequest).response { (result) in
+                Alamofire.request(urlRequest).response { [weak self] (result) in
                     
                     if let data = result.data {
                         
                         do {
                             let gallerySearchResult = try JSONDecoder().decode(ImgureGallerySearchResult.self, from: data)
-                            self.updateViewModels(gallerySearchResult: gallerySearchResult)
+                            self?.updateViewModels(gallerySearchResult: gallerySearchResult)
                         } catch (let error) {
-                            self.updateViewModels(gallerySearchResult: nil)
-                            
+                            self?.updateViewModels(gallerySearchResult: nil)
+
+                            self?.presentErrorAlert(error: error)
                             print((error as NSError).description)
                         }
                     } else {
                         
                         if let error = result.error {
                             print((error as NSError).description)
+                            self?.presentErrorAlert(error: error)
                         }
-                        
-                        self.updateViewModels(gallerySearchResult: nil)
+
+                        self?.updateViewModels(gallerySearchResult: nil)
                     }
                 }
             }
