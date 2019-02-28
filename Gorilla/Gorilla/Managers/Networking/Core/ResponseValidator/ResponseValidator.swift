@@ -36,7 +36,7 @@ class ResponseValidator {
     }
 
     func validateURLSessionError(_ error: Error) -> URLSessionError {
-        return URLSessionError(rawValue: error)
+        return URLSessionError.sessionError(from: error as NSError)
     }
 
     enum ValidationError: Error {
@@ -89,12 +89,25 @@ extension ResponseValidator {
         case noInternetConnection(NSError)
 
         init?(rawValue: NSError) {
+            self = URLSessionError.sessionError(from: rawValue)
+        }
 
-            switch rawValue.code {
+        static func sessionError(from error: NSError) -> URLSessionError {
+            switch error.code {
             case -1009:
-                self = .noInternetConnection(rawValue)
+                return .noInternetConnection(error)
             default:
-                self = .unknown(rawValue)
+                return .unknown(error)
+            }
+        }
+
+        var rawValue: NSError {
+
+            switch self {
+            case .unknown(let error):
+                return error
+            case .noInternetConnection(let error):
+                return error
             }
         }
     }
