@@ -10,7 +10,7 @@ class ImgurGetGallerySearchEndPoint: ImgurEndPoint {
     var httpMethod: HTTPMethod = .get
     
     var path: String {
-        return "/3/gallery/search"
+        return "/gallery/search"
     }
     
     var queryItems: [URLQueryItem]? {
