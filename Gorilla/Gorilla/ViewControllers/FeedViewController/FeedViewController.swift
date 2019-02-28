@@ -145,15 +145,25 @@ extension FeedViewController: UISearchBarDelegate {
             
             if let urlRequest = try? ImgurRequestBuilder(endPoint: gallerySearchRequest).asURLRequest() {
                 
-                Alamofire.request(urlRequest).responseJSON { (response) in
+                Alamofire.request(urlRequest).response { (result) in
                     
-                    switch response.result {
-                    case .success(let json as [String: Any]):
-                        self.updateViewModels(jsonDict: json)
-                    case .success(_):
-                        self.updateViewModels(jsonDict: nil)
-                    case .failure(_):
-                        self.updateViewModels(jsonDict: nil)
+                    if let data = result.data {
+                        
+                        do {
+                            let gallerySearchResult = try JSONDecoder().decode(ImgureGallerySearchResult.self, from: data)
+                            self.updateViewModels(gallerySearchResult: gallerySearchResult)
+                        } catch (let error) {
+                            self.updateViewModels(gallerySearchResult: nil)
+                            
+                            print((error as NSError).description)
+                        }
+                    } else {
+                        
+                        if let error = result.error {
+                            print((error as NSError).description)
+                        }
+                        
+                        self.updateViewModels(gallerySearchResult: nil)
                     }
                 }
             }
@@ -164,31 +174,34 @@ extension FeedViewController: UISearchBarDelegate {
         }
     }
     
-    func updateViewModels(jsonDict: [String: Any]?) {
+    func updateViewModels(gallerySearchResult: ImgureGallerySearchResult?) {
         
-        guard
-            let jsonDict = jsonDict,
-            let results = jsonDict["data"] as? [[String: Any]]
-        else {
+        guard let gallerySearchResult = gallerySearchResult else {
             self.viewModels.removeAll()
             self.searchedResults.removeAll()
+            collectionView.reloadData()
+            
             return
         }
-        
+    
         var viewModels = [FeedCollectionImageViewCellViewModel]()
         var searchedResults = [SearchedResult]()
-        
-        for result in results {
 
-            guard let identifier = result["id"] as? String else { continue }
+        for post in gallerySearchResult.posts {
             
-            if let images = result["images"] as? [[String: Any]],
-                let firstImage = images.first,
-                let imageUrlString = firstImage["link"] as? String,
-                let imageUrl = URL(string: imageUrlString) {
-                
-                viewModels.append(FeedCollectionImageViewCellViewModel(identifier: identifier))
-                searchedResults.append(SearchedResult(identifier, imageUrl))
+            for image in post.images {
+            
+                switch image.type {
+                case .imageJPEG, .imagePNG:
+                    
+                    if let imageURL = URL(string: image.link)  {
+                        viewModels.append(FeedCollectionImageViewCellViewModel(identifier: image.identifier))
+                        searchedResults.append(SearchedResult(image.identifier, imageURL))
+                    }
+                case .unknown, .imageGIF, .videoMP4:
+                    print("UNSUPPORTED CONTENT TYPE - \(image.type.rawValue)")
+                    break
+                }
             }
         }
         
