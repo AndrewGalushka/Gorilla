@@ -26,7 +26,7 @@
 		8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E25221D94130037C19B /* AppCoordinator.swift */; };
 		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
 		908A6021110A538AFB3221BD /* Pods_GorillaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */; };
-		99A1E060C306F74ECA6317B2 /* AbstructResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E913017D9C212F93C7AA /* AbstructResponseValidator.swift */; };
+		99A1E060C306F74ECA6317B2 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E913017D9C212F93C7AA /* ResponseValidator.swift */; };
 		99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */; };
 		99A1E2C2D801CAAE12F9414D /* ImgurGetGallerySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EB43615C4BB8C8AD629A /* ImgurGetGallerySearchRequest.swift */; };
 		99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E75E43A3A572158F11CE /* FeedViewController.swift */; };
@@ -92,7 +92,7 @@
 		99A1E8079D0741936E03B88F /* HTTPResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseError.swift; sourceTree = "<group>"; };
 		99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentType.swift; sourceTree = "<group>"; };
 		99A1E8D3205E17958D3C7AD2 /* ImgurRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurRequestBuilder.swift; sourceTree = "<group>"; };
-		99A1E913017D9C212F93C7AA /* AbstructResponseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstructResponseValidator.swift; sourceTree = "<group>"; };
+		99A1E913017D9C212F93C7AA /* ResponseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
 		99A1EAA399F509EF921608AF /* URLSessionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionError.swift; sourceTree = "<group>"; };
 		99A1EB43615C4BB8C8AD629A /* ImgurGetGallerySearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurGetGallerySearchRequest.swift; sourceTree = "<group>"; };
 		99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		8DE97B302226D135001EE5E9 /* ResponseValidator */ = {
 			isa = PBXGroup;
 			children = (
-				99A1E913017D9C212F93C7AA /* AbstructResponseValidator.swift */,
+				99A1E913017D9C212F93C7AA /* ResponseValidator.swift */,
 				99A1E8079D0741936E03B88F /* HTTPResponseError.swift */,
 				99A1EAA399F509EF921608AF /* URLSessionError.swift */,
 			);
@@ -559,7 +559,7 @@
 				99A1E6C5953F03B1FF087C8E /* ImgurRequestBuilder.swift in Sources */,
 				8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */,
 				99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */,
-				99A1E060C306F74ECA6317B2 /* AbstructResponseValidator.swift in Sources */,
+				99A1E060C306F74ECA6317B2 /* ResponseValidator.swift in Sources */,
 				99A1E35817E8A6E015DA2063 /* HTTPResponseError.swift in Sources */,
 				99A1EF827171BC35ED5CABE9 /* URLSessionError.swift in Sources */,
 			);
