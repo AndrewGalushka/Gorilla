@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		788CD5BB91B35ADFBC8291EA /* Pods_Gorilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6027435A53F9FF40CF4E2B2E /* Pods_Gorilla.framework */; };
-		8D0A908C2224369900B2D195 /* NetworkRequestModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0A908B2224369900B2D195 /* NetworkRequestModule.swift */; };
 		8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */; };
 		8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */; };
 		8D23C475221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */; };
@@ -19,37 +18,27 @@
 		8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */; };
 		8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */; };
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
-		8D9E74112224317600B30874 /* ResponseDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E74102224317600B30874 /* ResponseDataMapper.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
 		8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */; };
 		8DDA2862222E847200247E05 /* ImgurTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA2861222E847200247E05 /* ImgurTarget.swift */; };
 		8DDD47952231601A005F555D /* SpecificResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD47942231601A005F555D /* SpecificResult.swift */; };
 		8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */; };
-		8DE97B282226A175001EE5E9 /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE97B272226A175001EE5E9 /* ResponseValidator.swift */; };
-		8DE97B2A2226CA7E001EE5E9 /* NetworkDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE97B292226CA7E001EE5E9 /* NetworkDataResponse.swift */; };
-		8DE97B2C2226CB3F001EE5E9 /* Alamofire+DefaultDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE97B2B2226CB3F001EE5E9 /* Alamofire+DefaultDataResponse.swift */; };
 		8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E25221D94130037C19B /* AppCoordinator.swift */; };
 		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
 		908A6021110A538AFB3221BD /* Pods_GorillaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */; };
-		99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */; };
-		99A1E249AA96A82E28F7FBA5 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E819B96C79383A604FC1 /* JSONEncodable.swift */; };
 		99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E75E43A3A572158F11CE /* FeedViewController.swift */; };
 		99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */; };
 		99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E1235B2B788E6FEA365E /* AppDelegate.swift */; };
 		99A1E45180C3143F9B23E554 /* GorillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */; };
-		99A1E5DD704C353031CADB3F /* NetworkEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */; };
 		99A1E64BB3BDBC887DD8BC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */; };
 		99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EF1CC75EA1CAE2010169 /* TargetConvertible.swift */; };
-		99A1E887B3210114EE7CD05D /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */; };
 		99A1E9A1E6812C59AEE84AD3 /* ImgurAPIGallerySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA3E98F4C7181731ED45 /* ImgurAPIGallerySearch.swift */; };
 		99A1E9BE2FF252AD0DFB5369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */; };
 		99A1E9EFFCEE3276D223EAAE /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EAF972BB8ADB001EA6D7 /* JSONDecodable.swift */; };
-		99A1EA5A9D5EAB60CBB815CA /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EED98F06659216509840 /* JSONCodable.swift */; };
 		99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1ECC7AD9B882BF9476B7A /* CredentialProvideable.swift */; };
 		99A1EB6CAB5BE93C3D170A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A1E6C9825437D136CD7DA6 /* Main.storyboard */; };
 		99A1EC974E554FD57895B91E /* ImgurAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EDE519198BEA9D31A9FF /* ImgurAPI.swift */; };
 		99A1ECD5B90ED421B871B8F9 /* ImgurAPIGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1EA38059CAF3B6A7691AB /* ImgurAPIGallery.swift */; };
-		99A1EF2141AC143206CC9647 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E5C84BA0FB484E6FAD85 /* RequestBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +56,6 @@
 		6604FC07FAA964D85AA4F8D7 /* Pods-GorillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorillaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D5C283965809B96BDF8B8 /* Pods-GorillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8D0A908B2224369900B2D195 /* NetworkRequestModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestModule.swift; sourceTree = "<group>"; };
 		8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgurAPI+ImgurTargetConvertible.swift"; sourceTree = "<group>"; };
 		8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTargetConvertible.swift; sourceTree = "<group>"; };
 		8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerSearchInteractor.swift; sourceTree = "<group>"; };
@@ -79,15 +67,11 @@
 		8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		8D54083F221DA79E0022C161 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
-		8D9E74102224317600B30874 /* ResponseDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataMapper.swift; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
 		8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurRequestManager.swift; sourceTree = "<group>"; };
 		8DDA2861222E847200247E05 /* ImgurTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTarget.swift; sourceTree = "<group>"; };
 		8DDD47942231601A005F555D /* SpecificResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResult.swift; sourceTree = "<group>"; };
 		8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJSONDataMapper.swift; sourceTree = "<group>"; };
-		8DE97B272226A175001EE5E9 /* ResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
-		8DE97B292226CA7E001EE5E9 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
-		8DE97B2B2226CB3F001EE5E9 /* Alamofire+DefaultDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+DefaultDataResponse.swift"; sourceTree = "<group>"; };
 		8DF59E25221D94130037C19B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DF59E26221D94130037C19B /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
 		9222F2CED78881D018D1A98B /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,13 +79,9 @@
 		99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gorilla.xcdatamodel; sourceTree = "<group>"; };
 		99A1E1235B2B788E6FEA365E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A1E130F4B7C3EBE71D0C10 /* GorillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GorillaTests.swift; sourceTree = "<group>"; };
-		99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSchemeType.swift; sourceTree = "<group>"; };
 		99A1E5654FA12BCBAEAA8A64 /* GorillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GorillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A1E5C84BA0FB484E6FAD85 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		99A1E6C9825437D136CD7DA6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99A1E75E43A3A572158F11CE /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		99A1E819B96C79383A604FC1 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
-		99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentType.swift; sourceTree = "<group>"; };
 		99A1EA38059CAF3B6A7691AB /* ImgurAPIGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurAPIGallery.swift; sourceTree = "<group>"; };
 		99A1EA3E98F4C7181731ED45 /* ImgurAPIGallerySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurAPIGallerySearch.swift; sourceTree = "<group>"; };
 		99A1EAF972BB8ADB001EA6D7 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
@@ -109,9 +89,7 @@
 		99A1ECB36A82AB05C94D6FD8 /* Gorilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gorilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A1ECC7AD9B882BF9476B7A /* CredentialProvideable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialProvideable.swift; sourceTree = "<group>"; };
 		99A1EDE519198BEA9D31A9FF /* ImgurAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgurAPI.swift; sourceTree = "<group>"; };
-		99A1EED98F06659216509840 /* JSONCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
 		99A1EF1CC75EA1CAE2010169 /* TargetConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConvertible.swift; sourceTree = "<group>"; };
-		99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
 		CB332D6B9D1BB93948310378 /* Pods-Gorilla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,7 +173,6 @@
 			children = (
 				8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */,
 				8DDD47942231601A005F555D /* SpecificResult.swift */,
-				8DE97B2D2226CBA5001EE5E9 /* Alamofire */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,22 +195,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8DE97B2D2226CBA5001EE5E9 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				8DE97B2B2226CB3F001EE5E9 /* Alamofire+DefaultDataResponse.swift */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		8DE97B302226D135001EE5E9 /* ResponseValidator */ = {
-			isa = PBXGroup;
-			children = (
-				8DE97B272226A175001EE5E9 /* ResponseValidator.swift */,
-			);
-			path = ResponseValidator;
-			sourceTree = "<group>";
-		};
 		8DF59E24221D94130037C19B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,15 +202,6 @@
 				8DF59E26221D94130037C19B /* AppCoordinatorType.swift */,
 			);
 			path = AppCoordinator;
-			sourceTree = "<group>";
-		};
-		99A1E17167B27FA8E13D2466 /* JSONMapping */ = {
-			isa = PBXGroup;
-			children = (
-				99A1E819B96C79383A604FC1 /* JSONEncodable.swift */,
-				99A1EED98F06659216509840 /* JSONCodable.swift */,
-			);
-			path = JSONMapping;
 			sourceTree = "<group>";
 		};
 		99A1E25431FACD5D4BFA2846 /* Managers */ = {
@@ -274,18 +226,6 @@
 			path = Gorilla;
 			sourceTree = "<group>";
 		};
-		99A1E6BA02FCE4FFB3EABDA4 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				8DE97B292226CA7E001EE5E9 /* NetworkDataResponse.swift */,
-				99A1E4FA5807AFD281C78718 /* URLSchemeType.swift */,
-				99A1EF7D278445D9E02E8575 /* NetworkEndPoint.swift */,
-				99A1E82B49E1DA6F6439E5FF /* NetworkEnvironmentType.swift */,
-				99A1E17167B27FA8E13D2466 /* JSONMapping */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
 		99A1E725D54D9812D39DFBD3 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,14 +243,14 @@
 			path = GorillaTests;
 			sourceTree = "<group>";
 		};
-		99A1E9012E7466C9C54C5182 /* ImgurAPI */ = {
+		99A1E9012E7466C9C54C5182 /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
-				99A1E725D54D9812D39DFBD3 /* Gallery */,
 				99A1EDE519198BEA9D31A9FF /* ImgurAPI.swift */,
 				8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */,
+				99A1E725D54D9812D39DFBD3 /* Gallery */,
 			);
-			path = ImgurAPI;
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 		99A1EA4C60ADCDB9CB022BC3 = {
@@ -328,8 +268,11 @@
 		99A1EAC6D09A896034832CC8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				99A1EC2B80B3A319E87DAD58 /* Core */,
-				99A1EE3E55981F94F1D9C6C2 /* Moya */,
+				99A1EAF972BB8ADB001EA6D7 /* JSONDecodable.swift */,
+				8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */,
+				99A1EF1CC75EA1CAE2010169 /* TargetConvertible.swift */,
+				99A1ECC7AD9B882BF9476B7A /* CredentialProvideable.swift */,
+				99A1EDFB5FDDF85E15D6A484 /* Imgur */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -341,18 +284,6 @@
 				99A1E1235B2B788E6FEA365E /* AppDelegate.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		99A1EC2B80B3A319E87DAD58 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				99A1E6BA02FCE4FFB3EABDA4 /* Types */,
-				8D0A908B2224369900B2D195 /* NetworkRequestModule.swift */,
-				8D9E74102224317600B30874 /* ResponseDataMapper.swift */,
-				99A1E5C84BA0FB484E6FAD85 /* RequestBuilder.swift */,
-				8DE97B302226D135001EE5E9 /* ResponseValidator */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		99A1ECF00BF67A33A20BBF3B /* ViewControllers */ = {
@@ -379,21 +310,9 @@
 				8DDA2861222E847200247E05 /* ImgurTarget.swift */,
 				8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */,
 				8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */,
-				99A1E9012E7466C9C54C5182 /* ImgurAPI */,
+				99A1E9012E7466C9C54C5182 /* EndPoints */,
 			);
 			path = Imgur;
-			sourceTree = "<group>";
-		};
-		99A1EE3E55981F94F1D9C6C2 /* Moya */ = {
-			isa = PBXGroup;
-			children = (
-				99A1EAF972BB8ADB001EA6D7 /* JSONDecodable.swift */,
-				8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */,
-				99A1EF1CC75EA1CAE2010169 /* TargetConvertible.swift */,
-				99A1ECC7AD9B882BF9476B7A /* CredentialProvideable.swift */,
-				99A1EDFB5FDDF85E15D6A484 /* Imgur */,
-			);
-			path = Moya;
 			sourceTree = "<group>";
 		};
 		99A1EF1187EF36DDCDF9C551 /* Resources */ = {
@@ -575,27 +494,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D23C479221EECB200DB4626 /* FeedCollectionView.swift in Sources */,
-				8D9E74112224317600B30874 /* ResponseDataMapper.swift in Sources */,
 				8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */,
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
 				8D23C475221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
-				8DE97B2C2226CB3F001EE5E9 /* Alamofire+DefaultDataResponse.swift in Sources */,
 				8DDD47952231601A005F555D /* SpecificResult.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
-				8DE97B2A2226CA7E001EE5E9 /* NetworkDataResponse.swift in Sources */,
-				99A1E14667CB63402B11402C /* URLSchemeType.swift in Sources */,
-				99A1E887B3210114EE7CD05D /* NetworkEndPoint.swift in Sources */,
-				99A1E5DD704C353031CADB3F /* NetworkEnvironmentType.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
-				8D0A908C2224369900B2D195 /* NetworkRequestModule.swift in Sources */,
 				8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */,
 				99A1E9EFFCEE3276D223EAAE /* JSONDecodable.swift in Sources */,
-				99A1E249AA96A82E28F7FBA5 /* JSONEncodable.swift in Sources */,
-				99A1EA5A9D5EAB60CBB815CA /* JSONCodable.swift in Sources */,
-				8DE97B282226A175001EE5E9 /* ResponseValidator.swift in Sources */,
-				99A1EF2141AC143206CC9647 /* RequestBuilder.swift in Sources */,
 				8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */,
 				8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */,
 				8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */,
