@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Moya
 import Kingfisher
 
 class FeedViewController: UIViewController {
@@ -36,7 +37,7 @@ class FeedViewController: UIViewController {
 
     private func configureSearchItem() {
         searchController = UISearchController(searchResultsController: nil)
-        searchController?.definesPresentationContext = true
+        self.definesPresentationContext = true
         searchController?.searchBar.delegate = self
         searchController?.searchBar.placeholder = "Search"
         searchController?.obscuresBackgroundDuringPresentation = false
@@ -140,8 +141,6 @@ extension FeedViewController: UICollectionViewDataSource {
                 
                _ = semaphore.wait(timeout: DispatchTime.now() + 10.0)
             }
-            
-            
         }
     }
 }
@@ -172,51 +171,31 @@ extension FeedViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         if let searchBarText = searchBar.text, !searchBarText.isEmpty {
-            let gallerySearchRequest = ImgurGetGallerySearchEndPoint()
-            gallerySearchRequest.query = searchBarText
-            gallerySearchRequest.mediaContentType = .jpg
-            gallerySearchRequest.size = .big
+            let gallerySearchAPI: ImgurAPI = ImgurAPI.gallery(.search(.init(query: searchBarText, size: .small, type: .png)))
             
-            if let urlRequest = try? ImgurRequestBuilder(endPoint: gallerySearchRequest).asURLRequest() {
+            ImgurRequestManager.shared.execute(gallerySearchAPI, mapper: SimpleJSONDataMapper<ImgureGallerySearchResult>()) { (result) in
                 
-                Alamofire.request(urlRequest).response { [weak self] (result) in
-                    
-                    if let data = result.data {
-                        
-                        do {
-                            let gallerySearchResult = try JSONDecoder().decode(ImgureGallerySearchResult.self, from: data)
-                            self?.updateViewModels(gallerySearchResult: gallerySearchResult)
-                        } catch (let error) {
-                            self?.updateViewModels(gallerySearchResult: nil)
-
-                            self?.presentErrorAlert(error: error)
-                            print((error as NSError).description)
-                        }
-                    } else {
-                        
-                        if let error = result.error {
-                            print((error as NSError).description)
-                            self?.presentErrorAlert(error: error)
-                        }
-
-                        self?.updateViewModels(gallerySearchResult: nil)
-                    }
+                switch result {
+                case .success(let gallerySearchResult):
+                    self.updateViewModels(gallerySearchResult: gallerySearchResult)
+                case .failure(let error):
+                    print(error)
+                    self.clearTableView()
                 }
             }
-        } else {
-            self.viewModels.removeAll()
-            self.searchedResults.removeAll()
-            self.collectionView.reloadData()
         }
+    }
+    
+    func clearTableView() {
+        self.viewModels.removeAll()
+        self.searchedResults.removeAll()
+        self.collectionView.reloadData()
     }
     
     func updateViewModels(gallerySearchResult: ImgureGallerySearchResult?) {
         
         guard let gallerySearchResult = gallerySearchResult else {
-            self.viewModels.removeAll()
-            self.searchedResults.removeAll()
-            collectionView.reloadData()
-            
+            clearTableView()
             return
         }
     
@@ -225,7 +204,10 @@ extension FeedViewController: UISearchBarDelegate {
 
         for post in gallerySearchResult.posts {
             
-            for image in post.images {
+            guard let images = post.images else { continue }
+//            let images = post.images
+            
+            for image in images {
             
                 switch image.type {
                 case .imageJPEG, .imagePNG:

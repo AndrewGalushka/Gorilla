@@ -20,7 +20,7 @@ extension ImgureGallerySearchResult {
 
     struct Post: Decodable {
         var identifier: String
-        var images: [Image]
+        var images: [Image]?
         
         enum CodingKeys: String, CodingKey {
             case identifier = "id"

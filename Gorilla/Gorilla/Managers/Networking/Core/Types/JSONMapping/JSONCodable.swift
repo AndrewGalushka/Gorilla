@@ -5,8 +5,9 @@
 
 import Foundation
 
-protocol JSONCodable: JSONDecodable, JSONEncodable {
-}
+//protocol JSONCodable: JSONDecodable, JSONEncodable {
+//}
+
 
 //class JSONMapper<Model: Encodable & Decodable>: JSONDecodable, JSONEncodable {
 //    func decodeJSONData(_ data: Data) -> Model? {
