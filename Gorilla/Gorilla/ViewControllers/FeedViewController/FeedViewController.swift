@@ -52,58 +52,36 @@ class FeedViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.setCollectionViewLayout(self.bigLayout, animated: false)
+        collectionView.setCollectionViewLayout(self.flowLayout, animated: false)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
     }
     
     enum CollectionViewLayoutType {
-        case small
-        case mid
-        case big
+        case flow
+        case grid
     }
     
-    var currentLayoutType: CollectionViewLayoutType = .big
+    var currentLayoutType: CollectionViewLayoutType = .flow
     
-    var smallLayout: UICollectionViewFlowLayout {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumInteritemSpacing = 1.0
-        flowLayout.itemSize = CGSize(width: self.collectionView.bounds.width / 8.0, height: self.collectionView.bounds.width / 10.0)
+    var flowLayout: UICollectionViewFlowLayout {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.minimumInteritemSpacing = 0.0
+        collectionViewLayout.minimumLineSpacing = 0.0
+        collectionViewLayout.itemSize = CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.width)
         
-        return flowLayout
+        return collectionViewLayout
     }
     
-    var midLayout: UICollectionViewFlowLayout {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumInteritemSpacing = 1.0
-        flowLayout.itemSize = CGSize(width: self.collectionView.bounds.width / 4.0, height: self.collectionView.bounds.width / 5.0)
+    var gridLayout: UICollectionViewFlowLayout {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.minimumInteritemSpacing = 0.0
+        collectionViewLayout.minimumLineSpacing = 0.0
+        collectionViewLayout.itemSize = CGSize(width: self.collectionView.bounds.width / 2.0, height: self.collectionView.bounds.width / 2.0)
         
-        return flowLayout
+        return collectionViewLayout
     }
-    
-    var bigLayout: UICollectionViewFlowLayout {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumInteritemSpacing = 1.0
-        flowLayout.itemSize = CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.width / 2.0)
-        
-        return flowLayout
-    }
-
-    func presentErrorAlert(error: Error) {
-
-        var presentingViewController: UIViewController
-
-        if let presentedVC = presentedViewController {
-            presentingViewController = presentedVC
-        } else {
-            presentingViewController = self
-        }
-
-        let alertController = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle:
-        .alert)
-        alertController.addAction( UIAlertAction(title: "OK", style: .cancel))
-        presentingViewController.present(alertController, animated: true)}
 }
 
 extension FeedViewController: UICollectionViewDataSource {
@@ -114,7 +92,6 @@ extension FeedViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath) as! FeedCollectionImageViewCell
         cell.configure(viewModel: viewModels[indexPath.row])
-        cell.contentView.backgroundColor = UIColor.randomColor()
         
         return cell
     }
@@ -150,15 +127,12 @@ extension FeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch self.currentLayoutType {
-        case .small:
-            self.collectionView.setCollectionViewLayout(self.midLayout, animated: true)
-            self.currentLayoutType = .mid
-        case .mid:
-            self.collectionView.setCollectionViewLayout(self.bigLayout, animated: true)
-            self.currentLayoutType = .big
-        case .big:
-            self.collectionView.setCollectionViewLayout(self.smallLayout, animated: true)
-            self.currentLayoutType = .small
+        case .flow:
+            self.collectionView.setCollectionViewLayout(self.gridLayout, animated: true)
+            self.currentLayoutType = .grid
+        case .grid:
+            self.collectionView.setCollectionViewLayout(self.flowLayout, animated: true)
+            self.currentLayoutType = .flow
         }
     }
     
@@ -205,7 +179,6 @@ extension FeedViewController: UISearchBarDelegate {
         for post in gallerySearchResult.posts {
             
             guard let images = post.images else { continue }
-//            let images = post.images
             
             for image in images {
             
