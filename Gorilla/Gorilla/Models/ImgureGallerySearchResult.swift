@@ -36,12 +36,16 @@ extension ImgureGallerySearchResult.Post {
         var link: String
         var type: ContentType
         var title: String?
+        var height: Int?
+        var width: Int?
         
         enum CodingKeys: String, CodingKey {
             case identifier = "id"
             case link = "link"
             case title = "title"
             case type = "type"
+            case height = "height"
+            case width = "width"
         }
     }
 }

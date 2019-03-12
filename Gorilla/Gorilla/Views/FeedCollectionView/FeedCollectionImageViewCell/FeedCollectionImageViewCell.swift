@@ -24,8 +24,8 @@ class FeedCollectionImageViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentView.layer.borderColor = UIColor.lightGray.cgColor
-        contentView.layer.borderWidth = 1.0
+        contentView.layer.borderColor = UIColor.gray.cgColor
+        contentView.layer.borderWidth = 2.0
     }
     
     func configure(viewModel: FeedCollectionImageViewCellViewModel?) {

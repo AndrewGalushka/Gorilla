@@ -17,7 +17,7 @@ class FeedViewController: UIViewController {
     
     var viewModels = [FeedCollectionImageViewCellViewModel]()
     
-    private typealias SearchedResult = (identifier: String, imageURL: URL)
+    private typealias SearchedResult = (identifier: String, imageURL: URL, imageHeight: Int?, imageWidth: Int?)
     private var searchedResults = [SearchedResult]()
     
     private var imageDownloadingDispatchQueue: OperationQueue {
@@ -52,20 +52,20 @@ class FeedViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.setCollectionViewLayout(self.flowLayout, animated: false)
+        collectionView.setCollectionViewLayout(self.plainLayout, animated: false)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
     }
     
     enum CollectionViewLayoutType {
-        case flow
+        case plain
         case grid
     }
     
-    var currentLayoutType: CollectionViewLayoutType = .flow
+    var currentLayoutType: CollectionViewLayoutType = .plain
     
-    var flowLayout: UICollectionViewFlowLayout {
+    var plainLayout: UICollectionViewFlowLayout {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.minimumInteritemSpacing = 0.0
         collectionViewLayout.minimumLineSpacing = 0.0
@@ -127,17 +127,49 @@ extension FeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch self.currentLayoutType {
-        case .flow:
+        case .plain:
             self.collectionView.setCollectionViewLayout(self.gridLayout, animated: true)
             self.currentLayoutType = .grid
         case .grid:
-            self.collectionView.setCollectionViewLayout(self.flowLayout, animated: true)
-            self.currentLayoutType = .flow
+            self.collectionView.setCollectionViewLayout(self.plainLayout, animated: true)
+            self.currentLayoutType = .plain
         }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchController?.searchBar.resignFirstResponder()
+    }
+}
+
+extension FeedViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let model = searchedResults[indexPath.row]
+        
+        var size = CGSize()
+        size.width = collectionView.bounds.width
+        
+        if let width = model.imageHeight, let height = model.imageWidth {
+            let cgWidth = CGFloat(width) / UIScreen.main.scale
+            let cgHeight = CGFloat(height) / UIScreen.main.scale
+            
+            let finalWidth: CGFloat
+            
+            switch self.currentLayoutType {
+            case .plain:
+                finalWidth = collectionView.bounds.width
+            case .grid:
+                finalWidth = collectionView.bounds.width / 2.0
+            }
+            
+            let finalHeight = CGSize(width: cgWidth, height: cgHeight).heightToAspectFit(inWidth: finalWidth)
+            size = CGSize(width: finalWidth, height: finalHeight)
+        } else {
+            size.height = collectionView.bounds.width
+        }
+        
+        print("sizeForItemAt \(indexPath) --- \(size)")
+        return size
     }
 }
 
@@ -187,7 +219,7 @@ extension FeedViewController: UISearchBarDelegate {
                     
                     if let imageURL = URL(string: image.link)  {
                         viewModels.append(FeedCollectionImageViewCellViewModel(identifier: image.identifier))
-                        searchedResults.append(SearchedResult(image.identifier, imageURL))
+                        searchedResults.append(SearchedResult(image.identifier, imageURL, image.height, image.width))
                     }
                 case .unknown, .imageGIF, .videoMP4:
                     print("UNSUPPORTED CONTENT TYPE - \(image.type.rawValue)")
