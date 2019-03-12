@@ -11,10 +11,14 @@ class AppCoordinator: Coordinator {
 
     private let window: UIWindow
     private let appSettings: AppSettings
+    private let serviceFactory: ServicesFactory
 
+    // MARK: - Intializers
+    
     init(window: UIWindow, appSettings: AppSettings) {
         self.window = window
         self.appSettings = appSettings
+        self.serviceFactory = ServicesFactory(appSettings: appSettings)
     }
 
     func start() {
@@ -24,5 +28,26 @@ class AppCoordinator: Coordinator {
         
         window.rootViewController = navigationViewController
         window.makeKeyAndVisible()
+    }
+}
+
+extension AppCoordinator {
+    
+    class ServicesFactory {
+        
+        // MARK: - Properties(Public)
+        
+        let imgurRequestManager: ImgurRequestManager
+        
+        // MARK: - Properties(Private)
+        
+        private let appSettings: AppSettings
+        
+        // MARK: - Initializers
+        
+        fileprivate init(appSettings: AppSettings) {
+            self.appSettings = appSettings
+            self.imgurRequestManager = ImgurRequestManager(clientID: appSettings.imgur.clientID)
+        }
     }
 }
