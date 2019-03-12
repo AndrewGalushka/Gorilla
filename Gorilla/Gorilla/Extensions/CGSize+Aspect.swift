@@ -15,41 +15,13 @@ extension CGSize {
         return round(fittingWidth * scaleRatio)
     }
     
-    func aspectFit(inHeight fittingHeight: CGFloat) -> CGSize {
+    func widthToAspectFit(inHeight fittingHeight: CGFloat) -> CGFloat {
         let scaleRatio = self.height / self.width
-        
-        return CGSize(width: width * scaleRatio, height: fittingHeight)
+        return round(fittingHeight * scaleRatio)
     }
     
-    static func aspectFit(aspectRatio : CGSize, boundingSize: CGSize) -> CGSize {
-        let mW = boundingSize.width / aspectRatio.width;
-        let mH = boundingSize.height / aspectRatio.height;
-        
-        var boundingSize = boundingSize
-        
-        if( mH < mW ) {
-            boundingSize.width = boundingSize.height / aspectRatio.height * aspectRatio.width;
-        }
-        else if( mW < mH ) {
-            boundingSize.height = boundingSize.width / aspectRatio.width * aspectRatio.height;
-        }
-        
-        return boundingSize;
-    }
-    
-    static func aspectFill(aspectRatio :CGSize, minimumSize: CGSize) -> CGSize {
-        let mW = minimumSize.width / aspectRatio.width;
-        let mH = minimumSize.height / aspectRatio.height;
-        
-        var minimumSize = minimumSize
-        
-        if( mH > mW ) {
-            minimumSize.width = minimumSize.height / aspectRatio.height * aspectRatio.width;
-        }
-        else if( mW > mH ) {
-            minimumSize.height = minimumSize.width / aspectRatio.width * aspectRatio.height;
-        }
-        
-        return minimumSize;
+    func sizeToAspectFit(inSize targetSize: CGSize) -> CGSize {
+        let scaleRatio = min(targetSize.width / self.width, targetSize.height / self.height)
+        return CGSize(width: round(self.width * scaleRatio), height: round(self.height * scaleRatio))
     }
 }
