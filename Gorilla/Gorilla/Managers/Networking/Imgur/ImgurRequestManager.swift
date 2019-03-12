@@ -11,8 +11,10 @@ import Moya
 class ImgurRequestManager {
     private let provider: MoyaProvider<AnyImgurTarget>
     private let authorizationPlugin: ImgurAuthenticationPlugin
+    private let clientID: String
     
-    init() {
+    init(clientID: String) {
+        self.clientID = clientID
         self.authorizationPlugin = ImgurAuthenticationPlugin()
         self.provider = MoyaProvider<AnyImgurTarget>.init(plugins: [authorizationPlugin])
         
@@ -58,16 +60,13 @@ class ImgurRequestManager {
             return .failure(moyaError)
         }
     }
-    
-    // FIXME: Remove It
-    static var shared: ImgurRequestManager = ImgurRequestManager()
 }
 
 extension ImgurRequestManager: ImgurAuthenticationPluginDelegate {
     func imgurAuthenticationPlugin(_ imgurAuthPlugin: ImgurAuthenticationPlugin, tokenFor accessType: ImgurAccessType) -> String? {
         switch accessType {
         case .none: return nil
-        case .clientID: return "6a1d17a3a133ad8"
+        case .clientID: return self.clientID
         case .token: return nil
         }
     }

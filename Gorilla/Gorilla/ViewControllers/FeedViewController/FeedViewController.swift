@@ -179,16 +179,16 @@ extension FeedViewController: UISearchBarDelegate {
         if let searchBarText = searchBar.text, !searchBarText.isEmpty {
             let gallerySearchAPI: ImgurAPI = ImgurAPI.gallery(.search(.init(query: searchBarText, size: .small, type: .png)))
             
-            ImgurRequestManager.shared.execute(gallerySearchAPI, mapper: SimpleJSONDataMapper<ImgureGallerySearchResult>()) { (result) in
-                
-                switch result {
-                case .success(let gallerySearchResult):
-                    self.updateViewModels(gallerySearchResult: gallerySearchResult)
-                case .failure(let error):
-                    print(error)
-                    self.clearTableView()
-                }
-            }
+//            ImgurRequestManager.shared.execute(gallerySearchAPI, mapper: SimpleJSONDataMapper<ImgureGallerySearchResult>()) { (result) in
+//
+//                switch result {
+//                case .success(let gallerySearchResult):
+//                    self.updateViewModels(gallerySearchResult: gallerySearchResult)
+//                case .failure(let error):
+//                    print(error)
+//                    self.clearTableView()
+//                }
+//            }
         }
     }
     
