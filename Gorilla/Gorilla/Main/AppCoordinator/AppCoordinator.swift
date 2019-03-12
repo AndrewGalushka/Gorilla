@@ -5,15 +5,16 @@
 
 import UIKit
 
-
-class AppCoordinator: AppCoordinatorType {
+class AppCoordinator: Coordinator {
 
     // MARK: - Properties(Private)
 
-    let window: UIWindow
+    private let window: UIWindow
+    private let appSettings: AppSettings
 
-    init(window: UIWindow) {
+    init(window: UIWindow, appSettings: AppSettings) {
         self.window = window
+        self.appSettings = appSettings
     }
 
     func start() {

@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol AppCoordinatorType {
+protocol Coordinator {
     func start()
 }

@@ -20,6 +20,8 @@
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
+		8DCEA48B2237F42E00970A92 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48A2237F42E00970A92 /* AppSettings.swift */; };
+		8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */; };
 		8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */; };
 		8DDA2862222E847200247E05 /* ImgurTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA2861222E847200247E05 /* ImgurTarget.swift */; };
 		8DDD47952231601A005F555D /* SpecificResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD47942231601A005F555D /* SpecificResult.swift */; };
@@ -70,6 +72,8 @@
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
+		8DCEA48A2237F42E00970A92 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
 		8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurRequestManager.swift; sourceTree = "<group>"; };
 		8DDA2861222E847200247E05 /* ImgurTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTarget.swift; sourceTree = "<group>"; };
 		8DDD47942231601A005F555D /* SpecificResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResult.swift; sourceTree = "<group>"; };
@@ -198,11 +202,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8DCEA48C2237F59500970A92 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				8DCEA48A2237F42E00970A92 /* AppSettings.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
 		8DF59E24221D94130037C19B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
 				8DF59E25221D94130037C19B /* AppCoordinator.swift */,
 				8DF59E26221D94130037C19B /* AppCoordinatorType.swift */,
+				8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -283,6 +296,7 @@
 		99A1EB1DE739821150785C1D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				8DCEA48C2237F59500970A92 /* AppSettings */,
 				8DF59E24221D94130037C19B /* AppCoordinator */,
 				99A1E1235B2B788E6FEA365E /* AppDelegate.swift */,
 			);
@@ -519,7 +533,9 @@
 				99A1ECD5B90ED421B871B8F9 /* ImgurAPIGallery.swift in Sources */,
 				8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */,
 				99A1E9A1E6812C59AEE84AD3 /* ImgurAPIGallerySearch.swift in Sources */,
+				8DCEA48B2237F42E00970A92 /* AppSettings.swift in Sources */,
 				8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */,
+				8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */,
 				99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */,
 				99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */,
 			);
