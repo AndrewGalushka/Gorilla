@@ -17,6 +17,12 @@
 		8D23C480221EF23600DB4626 /* FeedCollectionImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D23C47E221EF23600DB4626 /* FeedCollectionImageViewCell.xib */; };
 		8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */; };
 		8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */; };
+		8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */; };
+		8D6CFF7E2239098E005C89DC /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */; };
+		8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */; };
+		8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */; };
+		8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */; };
+		8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */; };
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
@@ -69,6 +75,12 @@
 		8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionImageViewCellViewModel.swift; sourceTree = "<group>"; };
 		8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		8D54083F221DA79E0022C161 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardTypes.swift"; sourceTree = "<group>"; };
+		8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
+		8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderIdentifiable.swift; sourceTree = "<group>"; };
+		8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceBuilderIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
+		8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewControllerInstantiation.swift"; sourceTree = "<group>"; };
+		8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+StoryboardInstantiatable.swift"; sourceTree = "<group>"; };
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
@@ -151,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				99A1E75E43A3A572158F11CE /* FeedViewController.swift */,
+				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
 				8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */,
 				8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */,
 			);
@@ -180,6 +193,9 @@
 				8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */,
 				8DDD47942231601A005F555D /* SpecificResult.swift */,
 				8DB579452236A30200C18F91 /* CGSize+Aspect.swift */,
+				8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */,
+				8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */,
+				8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +208,15 @@
 				8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */,
 			);
 			path = FeedCollectionImageViewCell;
+			sourceTree = "<group>";
+		};
+		8D6CFF8122390B76005C89DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */,
+				8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8D76851D22259D8100B6AC98 /* Models */ = {
@@ -232,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				8D76851D22259D8100B6AC98 /* Models */,
+				8D6CFF8122390B76005C89DC /* Protocols */,
 				8D23C47A221EEE9000DB4626 /* Extensions */,
 				8D23C476221EEC7400DB4626 /* Views */,
 				99A1EB1DE739821150785C1D /* Main */,
@@ -520,8 +546,11 @@
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
+				8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */,
 				8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */,
+				8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */,
 				99A1E9EFFCEE3276D223EAAE /* JSONDecodable.swift in Sources */,
+				8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */,
 				8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */,
 				8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */,
 				8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */,
@@ -529,6 +558,7 @@
 				8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */,
 				8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */,
 				99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */,
+				8D6CFF7E2239098E005C89DC /* StoryboardInstantiatable.swift in Sources */,
 				99A1EC974E554FD57895B91E /* ImgurAPI.swift in Sources */,
 				99A1ECD5B90ED421B871B8F9 /* ImgurAPIGallery.swift in Sources */,
 				8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */,
@@ -538,6 +568,8 @@
 				8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */,
 				99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */,
 				99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */,
+				8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */,
+				8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

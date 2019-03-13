@@ -11,14 +11,14 @@ class AppCoordinator: Coordinator {
 
     private let window: UIWindow
     private let appSettings: AppSettings
-    private let serviceFactory: ServicesFactory
+    private let servicesFactory: ServicesFactory
 
     // MARK: - Intializers
     
     init(window: UIWindow, appSettings: AppSettings) {
         self.window = window
         self.appSettings = appSettings
-        self.serviceFactory = ServicesFactory(appSettings: appSettings)
+        self.servicesFactory = ServicesFactory(appSettings: appSettings)
     }
 
     func start() {

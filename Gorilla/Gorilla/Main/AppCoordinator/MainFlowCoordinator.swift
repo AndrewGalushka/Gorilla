@@ -6,14 +6,18 @@
 //  Copyright © 2019 Galushka.com. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-//class MainFlowCoordinator: Coordinator {
-//    
-//    init(navigationController: UINavigationController, appSettings: AppSettings) {
-//        
-//    }
-//    
-//    func start() {
-//    }
-//}
+class MainFlowCoordinator: Coordinator {
+    
+    private let navigationController: UINavigationController
+    private let servicesFactory: AppCoordinator.ServicesFactory
+    
+    init(navigationController: UINavigationController, servicesFactory: AppCoordinator.ServicesFactory) {
+        self.navigationController = navigationController
+        self.servicesFactory = servicesFactory
+    }
+    
+    func start() {
+    }
+}
