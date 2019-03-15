@@ -54,8 +54,8 @@ class PostImageFetcher {
         operationQueue.addOperation {
             
             let semaphore = DispatchSemaphore(value: 0)
-            
-            KingfisherManager.shared.downloader.downloadImage(with: URL, options: nil) { (response) in
+           
+            KingfisherManager.shared.retrieveImage(with: ImageResource(downloadURL: URL), options: [.memoryCacheExpiration(.days(1))], completionHandler: { (response) in
                 let result: SpecificResult<UIImage, PostImageFetcherError>
                 
                 switch response {
@@ -68,7 +68,7 @@ class PostImageFetcher {
                 DispatchQueue.main.async {
                     completion(result)
                 }
-            }
+            })
             
             let waitingResult = semaphore.wait(timeout: .now() + self.operationMaxLockTime)
             
