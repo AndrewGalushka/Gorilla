@@ -46,7 +46,7 @@ class PostImageFetcher {
     
     func fetch(_ postImage: ImgureGallerySearchResult.Post.Image, completion: @escaping (_ result: SpecificResult<UIImage, PostImageFetcherError>) -> Void) {
         
-        guard let URL = URL(string: postImage.link) else {
+        guard let url = URL(string: postImage.link) else {
             completion(.failure(PostImageFetcherError.badURL))
             return
         }
@@ -55,7 +55,7 @@ class PostImageFetcher {
             
             let semaphore = DispatchSemaphore(value: 0)
            
-            KingfisherManager.shared.retrieveImage(with: ImageResource(downloadURL: URL), options: [.memoryCacheExpiration(.days(1))], completionHandler: { (response) in
+            KingfisherManager.shared.retrieveImage(with: ImageResource(downloadURL: url), options: [.memoryCacheExpiration(.days(1))], completionHandler: { (response) in
                 let result: SpecificResult<UIImage, PostImageFetcherError>
                 
                 switch response {
@@ -75,7 +75,7 @@ class PostImageFetcher {
             switch waitingResult {
             case .success: break
             case .timedOut:
-                print("PostImageFetcher waiting TIMEOUT|time=\(self.operationMaxLockTime)")
+                print("PostImageFetcher waiting TIMEOUT|time=\(self.operationMaxLockTime)|url=\(url.absoluteString)")
             }
         }
     }
