@@ -11,7 +11,7 @@ import UIKit
 extension CGSize {
     
     func heightToAspectFit(inWidth fittingWidth: CGFloat) -> CGFloat {
-        let scaleRatio = self.width / self.height
+        let scaleRatio = self.height / self.width
         return round(fittingWidth * scaleRatio)
     }
     

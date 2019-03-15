@@ -12,13 +12,17 @@ import Moya
 import Kingfisher
 
 class FeedViewController: UIViewController {
+    
+    // MARK: - Properties(Public)
+    
+    weak var delegate: FeedViewControllerDelegate?
+    
+    // MARK: - Properties(Public)
+    
     @IBOutlet private weak var collectionView: UICollectionView!
     private var searchController: UISearchController?
     
-    var viewModels = [FeedCollectionImageViewCellViewModel]()
-    
-    private typealias SearchedResult = (identifier: String, imageURL: URL, imageHeight: Int?, imageWidth: Int?)
-    private var searchedResults = [SearchedResult]()
+    private var viewModels = [FeedCollectionImageViewCellViewModel]()
     
     private var imageDownloadingDispatchQueue: OperationQueue {
         let dispatchQueue = OperationQueue()
@@ -26,6 +30,8 @@ class FeedViewController: UIViewController {
         
         return dispatchQueue
     }
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +41,8 @@ class FeedViewController: UIViewController {
         configureCollectionView()
     }
 
+    // MARK: - Methods(Private)
+    
     private func configureSearchItem() {
         searchController = UISearchController(searchResultsController: nil)
         self.definesPresentationContext = true
@@ -57,6 +65,8 @@ class FeedViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
     }
+    
+    // MARK: - CollectionView Layout
     
     enum CollectionViewLayoutType {
         case plain
@@ -97,28 +107,7 @@ extension FeedViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        if let cell = cell as? FeedCollectionImageViewCell, let cellViewModel = cell.viewModel, let relatedSearchedVM = searchedResults.first(where: { $0.identifier == cellViewModel.identifier}) {
-            
-            self.imageDownloadingDispatchQueue.addOperation {
-                
-                let semaphore = DispatchSemaphore(value: 0)
-                
-                KingfisherManager.shared.downloader.downloadImage(with: relatedSearchedVM.imageURL) { result in
-                    
-                    switch result {
-                    case .success(let imageLoadingResult):
-                        cellViewModel.imageURL.value = imageLoadingResult.image
-                    case .failure(let error):
-                        print("/n URL=\(relatedSearchedVM.imageURL) ERROR=\(error.localizedDescription)/n")
-                    }
-                    
-                    semaphore.signal()
-                }
-                
-               _ = semaphore.wait(timeout: DispatchTime.now() + 10.0)
-            }
-        }
+        self.delegate?.willDisplay(viewModels[indexPath.row])
     }
 }
 
@@ -144,92 +133,24 @@ extension FeedViewController: UICollectionViewDelegate {
 extension FeedViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let model = searchedResults[indexPath.row]
+        guard let delegate = delegate else { return CGSize.zero }
         
-        var size = CGSize()
-        size.width = collectionView.bounds.width
-        
-        if let width = model.imageHeight, let height = model.imageWidth {
-            let cgWidth = CGFloat(width) / UIScreen.main.scale
-            let cgHeight = CGFloat(height) / UIScreen.main.scale
-            
-            let finalWidth: CGFloat
-            
-            switch self.currentLayoutType {
-            case .plain:
-                finalWidth = collectionView.bounds.width
-            case .grid:
-                finalWidth = collectionView.bounds.width / 2.0
-            }
-            
-            let finalHeight = CGSize(width: cgWidth, height: cgHeight).heightToAspectFit(inWidth: finalWidth)
-            size = CGSize(width: finalWidth, height: finalHeight)
-        } else {
-            size.height = collectionView.bounds.width
-        }
-        
-        print("sizeForItemAt \(indexPath) --- \(size)")
-        return size
+        let viewModel = self.viewModels[indexPath.row]
+        return delegate.itemSize(for: viewModel, in: collectionView, style: self.currentLayoutType)
     }
 }
 
 extension FeedViewController: UISearchBarDelegate {
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        if let searchBarText = searchBar.text, !searchBarText.isEmpty {
-            let gallerySearchAPI: ImgurAPI = ImgurAPI.gallery(.search(.init(query: searchBarText, size: .small, type: .png)))
-            
-//            ImgurRequestManager.shared.execute(gallerySearchAPI, mapper: SimpleJSONDataMapper<ImgureGallerySearchResult>()) { (result) in
-//
-//                switch result {
-//                case .success(let gallerySearchResult):
-//                    self.updateViewModels(gallerySearchResult: gallerySearchResult)
-//                case .failure(let error):
-//                    print(error)
-//                    self.clearTableView()
-//                }
-//            }
-        }
+        self.delegate?.feedViewController(self, didTapSearchText: searchBar.text)
     }
-    
-    func clearTableView() {
-        self.viewModels.removeAll()
-        self.searchedResults.removeAll()
-        self.collectionView.reloadData()
-    }
-    
-    func updateViewModels(gallerySearchResult: ImgureGallerySearchResult?) {
-        
-        guard let gallerySearchResult = gallerySearchResult else {
-            clearTableView()
-            return
-        }
-    
-        var viewModels = [FeedCollectionImageViewCellViewModel]()
-        var searchedResults = [SearchedResult]()
+}
 
-        for post in gallerySearchResult.posts {
-            
-            guard let images = post.images else { continue }
-            
-            for image in images {
-            
-                switch image.type {
-                case .imageJPEG, .imagePNG:
-                    
-                    if let imageURL = URL(string: image.link)  {
-                        viewModels.append(FeedCollectionImageViewCellViewModel(identifier: image.identifier))
-                        searchedResults.append(SearchedResult(image.identifier, imageURL, image.height, image.width))
-                    }
-                case .unknown, .imageGIF, .videoMP4:
-                    print("UNSUPPORTED CONTENT TYPE - \(image.type.rawValue)")
-                    break
-                }
-            }
-        }
-        
-        self.viewModels = viewModels
-        self.searchedResults = searchedResults
-        collectionView.reloadData()
+extension FeedViewController: FeedViewControllerPresenterOutputDelegate {
+    
+    func displaySearchResults(_ searchResults: [FeedCollectionImageViewCellViewModel]) {
+        self.viewModels = searchResults
+        self.collectionView.reloadData()
     }
 }

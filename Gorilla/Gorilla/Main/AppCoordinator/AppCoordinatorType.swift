@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol Coordinator {
+protocol FlowCoordinator: AnyObject {
     func start()
 }

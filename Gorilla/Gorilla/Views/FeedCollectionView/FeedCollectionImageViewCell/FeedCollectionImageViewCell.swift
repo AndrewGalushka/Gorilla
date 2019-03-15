@@ -11,7 +11,7 @@ import RxSwift
 
 class FeedCollectionImageViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
-    private(set) var viewModel: FeedCollectionImageViewCellViewModel?
+    private(set) var viewModel: FeedCollectionImageViewCellViewModelType?
     
     private var disposeBag: DisposeBag?
     
@@ -28,18 +28,18 @@ class FeedCollectionImageViewCell: UICollectionViewCell {
         contentView.layer.borderWidth = 2.0
     }
     
-    func configure(viewModel: FeedCollectionImageViewCellViewModel?) {
+    func configure(viewModel: FeedCollectionImageViewCellViewModelType?) {
         self.viewModel = viewModel
-        imageView.image = viewModel?.imageURL.value
+        imageView.image = viewModel?.image.value
         
         subscribe(on: viewModel)
     }
     
-    private func subscribe(on viewModel: FeedCollectionImageViewCellViewModel?) {
+    private func subscribe(on viewModel: FeedCollectionImageViewCellViewModelType?) {
         unsubscribe()
         
         if let viewModel = viewModel {
-            let imageURLDispose = viewModel.imageURL.asObservable().subscribe(onNext: { (image) in
+            let imageURLDispose = viewModel.image.asObservable().subscribe(onNext: { (image) in
                 self.imageView.image = image
             }, onError: nil, onCompleted: nil, onDisposed: nil)
             

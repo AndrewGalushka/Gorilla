@@ -8,21 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		788CD5BB91B35ADFBC8291EA /* Pods_Gorilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6027435A53F9FF40CF4E2B2E /* Pods_Gorilla.framework */; };
+		8D0882F6223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */; };
+		8D0A6415223BD93600FDF4E1 /* PostImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */; };
 		8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */; };
 		8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */; };
-		8D23C475221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */; };
-		8D23C479221EECB200DB4626 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C478221EECB200DB4626 /* FeedCollectionView.swift */; };
 		8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */; };
 		8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C47D221EF23600DB4626 /* FeedCollectionImageViewCell.swift */; };
 		8D23C480221EF23600DB4626 /* FeedCollectionImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D23C47E221EF23600DB4626 /* FeedCollectionImageViewCell.xib */; };
 		8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */; };
-		8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */; };
 		8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */; };
 		8D6CFF7E2239098E005C89DC /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */; };
 		8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */; };
 		8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */; };
 		8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */; };
 		8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */; };
+		8D6CFF8B22392DC7005C89DC /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */; };
+		8D6CFF8D22393AF0005C89DC /* CordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8C22393AF0005C89DC /* CordinatorsFactory.swift */; };
+		8D6CFF8F2239406D005C89DC /* FeedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8E2239406D005C89DC /* FeedModule.swift */; };
+		8D6CFF91223941B8005C89DC /* ScreenModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF90223941B8005C89DC /* ScreenModule.swift */; };
+		8D6CFF9322394B65005C89DC /* ImgurGallerySearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */; };
+		8D6CFF9622394D01005C89DC /* ImgurGallerySearchInteractorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */; };
+		8D6CFF9822395C8A005C89DC /* FeedViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */; };
+		8D6CFF9D22395D28005C89DC /* FeedViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */; };
+		8D6CFF9F22396039005C89DC /* FeedViewControllerPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterDelegate.swift */; };
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
@@ -30,7 +38,7 @@
 		8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */; };
 		8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */; };
 		8DDA2862222E847200247E05 /* ImgurTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA2861222E847200247E05 /* ImgurTarget.swift */; };
-		8DDD47952231601A005F555D /* SpecificResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD47942231601A005F555D /* SpecificResult.swift */; };
+		8DDD47952231601A005F555D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD47942231601A005F555D /* Result.swift */; };
 		8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */; };
 		8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E25221D94130037C19B /* AppCoordinator.swift */; };
 		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
@@ -65,15 +73,14 @@
 		6604FC07FAA964D85AA4F8D7 /* Pods-GorillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorillaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D5C283965809B96BDF8B8 /* Pods-GorillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenterModelsConvertor.swift; sourceTree = "<group>"; };
+		8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageFetcher.swift; sourceTree = "<group>"; };
 		8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgurAPI+ImgurTargetConvertible.swift"; sourceTree = "<group>"; };
 		8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTargetConvertible.swift; sourceTree = "<group>"; };
-		8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerSearchInteractor.swift; sourceTree = "<group>"; };
-		8D23C478221EECB200DB4626 /* FeedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
 		8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		8D23C47D221EF23600DB4626 /* FeedCollectionImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionImageViewCell.swift; sourceTree = "<group>"; };
 		8D23C47E221EF23600DB4626 /* FeedCollectionImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionImageViewCell.xib; sourceTree = "<group>"; };
 		8D23C482221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionImageViewCellViewModel.swift; sourceTree = "<group>"; };
-		8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		8D54083F221DA79E0022C161 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardTypes.swift"; sourceTree = "<group>"; };
 		8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
@@ -81,6 +88,15 @@
 		8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceBuilderIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
 		8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewControllerInstantiation.swift"; sourceTree = "<group>"; };
 		8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+StoryboardInstantiatable.swift"; sourceTree = "<group>"; };
+		8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchProgressViewController.swift; sourceTree = "<group>"; };
+		8D6CFF8C22393AF0005C89DC /* CordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordinatorsFactory.swift; sourceTree = "<group>"; };
+		8D6CFF8E2239406D005C89DC /* FeedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModule.swift; sourceTree = "<group>"; };
+		8D6CFF90223941B8005C89DC /* ScreenModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModule.swift; sourceTree = "<group>"; };
+		8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchInteractor.swift; sourceTree = "<group>"; };
+		8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchInteractorType.swift; sourceTree = "<group>"; };
+		8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenter.swift; sourceTree = "<group>"; };
+		8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenterDelegate.swift; sourceTree = "<group>"; };
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
@@ -88,7 +104,7 @@
 		8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
 		8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurRequestManager.swift; sourceTree = "<group>"; };
 		8DDA2861222E847200247E05 /* ImgurTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTarget.swift; sourceTree = "<group>"; };
-		8DDD47942231601A005F555D /* SpecificResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificResult.swift; sourceTree = "<group>"; };
+		8DDD47942231601A005F555D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJSONDataMapper.swift; sourceTree = "<group>"; };
 		8DF59E25221D94130037C19B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DF59E26221D94130037C19B /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
@@ -151,6 +167,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D0882F2223A572B00BA7319 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8D0A6413223BD91000FDF4E1 /* PostImageFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */,
+			);
+			path = PostImageFetcher;
+			sourceTree = "<group>";
+		};
 		8D1A42C22231120000EDD03A /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,10 +193,13 @@
 		8D23C473221EE88B00DB4626 /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CFF8E2239406D005C89DC /* FeedModule.swift */,
+				8D6CFFA02239636F005C89DC /* Interactors */,
+				8D6CFF9922395CA0005C89DC /* Presenter */,
+				8D0882F2223A572B00BA7319 /* ViewModels */,
 				99A1E75E43A3A572158F11CE /* FeedViewController.swift */,
+				8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */,
 				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
-				8D23C474221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift */,
-				8D50395222267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift */,
 			);
 			path = FeedViewController;
 			sourceTree = "<group>";
@@ -181,7 +215,6 @@
 		8D23C477221EEC8000DB4626 /* FeedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				8D23C478221EECB200DB4626 /* FeedCollectionView.swift */,
 				8D23C481221EFBBA00DB4626 /* FeedCollectionImageViewCell */,
 			);
 			path = FeedCollectionView;
@@ -191,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */,
-				8DDD47942231601A005F555D /* SpecificResult.swift */,
+				8DDD47942231601A005F555D /* Result.swift */,
 				8DB579452236A30200C18F91 /* CGSize+Aspect.swift */,
 				8D6CFF7B223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift */,
 				8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */,
@@ -215,8 +248,45 @@
 			children = (
 				8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */,
 				8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */,
+				8D6CFF90223941B8005C89DC /* ScreenModule.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8D6CFF8922392D9D005C89DC /* LaunchProgressViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */,
+			);
+			path = LaunchProgressViewController;
+			sourceTree = "<group>";
+		};
+		8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */,
+				8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */,
+			);
+			path = ImgurGallerySearchInteractor;
+			sourceTree = "<group>";
+		};
+		8D6CFF9922395CA0005C89DC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */,
+				8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */,
+				8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterDelegate.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8D6CFFA02239636F005C89DC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				8D0A6413223BD91000FDF4E1 /* PostImageFetcher */,
+				8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		8D76851D22259D8100B6AC98 /* Models */ = {
@@ -238,6 +308,7 @@
 		8DF59E24221D94130037C19B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CFF8C22393AF0005C89DC /* CordinatorsFactory.swift */,
 				8DF59E25221D94130037C19B /* AppCoordinator.swift */,
 				8DF59E26221D94130037C19B /* AppCoordinatorType.swift */,
 				8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */,
@@ -332,6 +403,7 @@
 		99A1ECF00BF67A33A20BBF3B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CFF8922392D9D005C89DC /* LaunchProgressViewController */,
 				8D23C473221EE88B00DB4626 /* FeedViewController */,
 			);
 			path = ViewControllers;
@@ -536,35 +608,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D23C479221EECB200DB4626 /* FeedCollectionView.swift in Sources */,
 				8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */,
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
-				8D23C475221EE8A800DB4626 /* FeedViewControllerSearchInteractor.swift in Sources */,
 				8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
-				8DDD47952231601A005F555D /* SpecificResult.swift in Sources */,
+				8DDD47952231601A005F555D /* Result.swift in Sources */,
+				8D6CFF8B22392DC7005C89DC /* LaunchProgressViewController.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
+				8D6CFF9D22395D28005C89DC /* FeedViewControllerDelegate.swift in Sources */,
 				8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */,
 				8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */,
 				8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */,
 				99A1E9EFFCEE3276D223EAAE /* JSONDecodable.swift in Sources */,
 				8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */,
 				8D23C483221EFBD000DB4626 /* FeedCollectionImageViewCellViewModel.swift in Sources */,
-				8D50395322267CCC00E55E1B /* FeedViewControllerCollectionViewDataSource.swift in Sources */,
 				8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */,
 				8DDA2862222E847200247E05 /* ImgurTarget.swift in Sources */,
 				8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */,
+				8D6CFF9F22396039005C89DC /* FeedViewControllerPresenterDelegate.swift in Sources */,
 				8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */,
 				99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */,
 				8D6CFF7E2239098E005C89DC /* StoryboardInstantiatable.swift in Sources */,
 				99A1EC974E554FD57895B91E /* ImgurAPI.swift in Sources */,
 				99A1ECD5B90ED421B871B8F9 /* ImgurAPIGallery.swift in Sources */,
 				8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */,
+				8D0A6415223BD93600FDF4E1 /* PostImageFetcher.swift in Sources */,
+				8D6CFF8D22393AF0005C89DC /* CordinatorsFactory.swift in Sources */,
+				8D6CFF8F2239406D005C89DC /* FeedModule.swift in Sources */,
 				99A1E9A1E6812C59AEE84AD3 /* ImgurAPIGallerySearch.swift in Sources */,
 				8DCEA48B2237F42E00970A92 /* AppSettings.swift in Sources */,
+				8D6CFF91223941B8005C89DC /* ScreenModule.swift in Sources */,
+				8D0882F6223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift in Sources */,
 				8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */,
+				8D6CFF9322394B65005C89DC /* ImgurGallerySearchInteractor.swift in Sources */,
+				8D6CFF9622394D01005C89DC /* ImgurGallerySearchInteractorType.swift in Sources */,
+				8D6CFF9822395C8A005C89DC /* FeedViewControllerPresenter.swift in Sources */,
 				8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */,
 				99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */,
 				99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */,

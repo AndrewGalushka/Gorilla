@@ -8,10 +8,11 @@
 
 import UIKit
 
-class MainFlowCoordinator: Coordinator {
+class MainFlowCoordinator: FlowCoordinator {
     
     private let navigationController: UINavigationController
     private let servicesFactory: AppCoordinator.ServicesFactory
+    private var feedModule: ScreenModule?
     
     init(navigationController: UINavigationController, servicesFactory: AppCoordinator.ServicesFactory) {
         self.navigationController = navigationController
@@ -19,5 +20,8 @@ class MainFlowCoordinator: Coordinator {
     }
     
     func start() {
+        let feedModule = FeedModule.buildModule(serviceFactory: servicesFactory)
+        self.feedModule = feedModule
+        navigationController.setViewControllers([feedModule.ownedViewController], animated: false)
     }
 }

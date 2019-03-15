@@ -12,15 +12,18 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var appCoordinator: AppCoordinator?
+    var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let appSettings = AppSettings(launchOptions: launchOptions)
         
         self.appCoordinator = AppCoordinator(window: window, appSettings: appSettings)
-        self.appCoordinator?.start()
+        self.appCoordinator.start()
 
+        window.rootViewController = appCoordinator.rootViewController
+        window.makeKeyAndVisible()
+        
         return true
     }
 

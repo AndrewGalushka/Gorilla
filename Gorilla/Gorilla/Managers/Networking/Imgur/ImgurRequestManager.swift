@@ -23,12 +23,14 @@ class ImgurRequestManager {
     
     func execute<D: JSONDataDecodable>(_ imgurAPI: ImgurAPI, mapper: D, competion: @escaping (_ result: SpecificResult<D.OutputModel, MoyaError>) -> Void) {
         
-        self.execute(imgurAPI) { (result) in
+        self.execute(imgurAPI, callbackQueue: .global()) { (result) in
             
             switch result {
             case .success(let response):
                 
-                switch self.map(response, mapper: mapper) {
+                let mappingResult = self.map(response, mapper: mapper)
+                
+                switch mappingResult {
                 case .success(let mappedModel):
                     competion(SpecificResult<D.OutputModel, MoyaError>.success(mappedModel))
                 case .failure(let error):
@@ -37,8 +39,6 @@ class ImgurRequestManager {
             case .failure(let error):
                 competion(.failure(error))
             }
-            
-            
         }
     }
     
@@ -46,7 +46,10 @@ class ImgurRequestManager {
         _ = self.execute(imgurAPI, completionClosure: { (result) in competion(result) })
     }
     
-    private func execute(_ imgurAPI: ImgurAPI, progressClosure: Moya.ProgressBlock? = nil, completionClosure: @escaping Moya.Completion) -> Cancellable {
+    @discardableResult private func execute(_ imgurAPI: ImgurAPI,
+                                            callbackQueue: DispatchQueue = DispatchQueue.main,
+                                            progressClosure: Moya.ProgressBlock? = nil,
+                                            completionClosure: @escaping Moya.Completion) -> Cancellable {
         return provider.request(AnyImgurTarget(imgurAPI.asImgurTarget), callbackQueue: DispatchQueue.main, progress: progressClosure, completion: completionClosure)
     }
     

@@ -12,3 +12,8 @@ enum SpecificResult<SuccesType, ErrorType: Error> {
     case success(SuccesType)
     case failure(ErrorType)
 }
+
+enum Result<ErrorType: Error> {
+    case success
+    case failure(ErrorType)
+}

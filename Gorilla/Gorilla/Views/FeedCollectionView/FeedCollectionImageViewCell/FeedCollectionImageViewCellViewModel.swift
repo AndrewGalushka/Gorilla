@@ -9,9 +9,14 @@
 import UIKit
 import RxSwift
 
-class FeedCollectionImageViewCellViewModel {
+protocol FeedCollectionImageViewCellViewModelType {
+    var identifier: String { get }
+    var image: Variable<UIImage?> { get }
+}
+
+class FeedCollectionImageViewCellViewModel: FeedCollectionImageViewCellViewModelType {
     let identifier: String
-    var imageURL: Variable<UIImage?> = Variable(nil)
+    var image: Variable<UIImage?> = Variable(nil)
     
     init(identifier: String) {
         self.identifier = identifier
