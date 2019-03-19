@@ -30,7 +30,7 @@ class PostImageFetcher {
     // MARK: - Properties(Private)
     
     private let operationQueue: OperationQueue
-    private let operationMaxLockTime: Double = 10.0
+    private let operationMaxLockTime: Double = 1.0
     
     // MARK: - Initializers
     
