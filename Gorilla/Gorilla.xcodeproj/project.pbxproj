@@ -22,7 +22,6 @@
 		8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */; };
 		8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */; };
 		8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */; };
-		8D6CFF8B22392DC7005C89DC /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */; };
 		8D6CFF8D22393AF0005C89DC /* CordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8C22393AF0005C89DC /* CordinatorsFactory.swift */; };
 		8D6CFF8F2239406D005C89DC /* FeedModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF8E2239406D005C89DC /* FeedModule.swift */; };
 		8D6CFF91223941B8005C89DC /* ScreenModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF90223941B8005C89DC /* ScreenModule.swift */; };
@@ -88,7 +87,6 @@
 		8D6CFF8222390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceBuilderIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
 		8D6CFF8422390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewControllerInstantiation.swift"; sourceTree = "<group>"; };
 		8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+StoryboardInstantiatable.swift"; sourceTree = "<group>"; };
-		8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchProgressViewController.swift; sourceTree = "<group>"; };
 		8D6CFF8C22393AF0005C89DC /* CordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CordinatorsFactory.swift; sourceTree = "<group>"; };
 		8D6CFF8E2239406D005C89DC /* FeedModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModule.swift; sourceTree = "<group>"; };
 		8D6CFF90223941B8005C89DC /* ScreenModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModule.swift; sourceTree = "<group>"; };
@@ -190,7 +188,7 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		8D23C473221EE88B00DB4626 /* FeedViewController */ = {
+		8D23C473221EE88B00DB4626 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				8D6CFF8E2239406D005C89DC /* FeedModule.swift */,
@@ -201,7 +199,7 @@
 				8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */,
 				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
 			);
-			path = FeedViewController;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		8D23C476221EEC7400DB4626 /* Views */ = {
@@ -251,14 +249,6 @@
 				8D6CFF90223941B8005C89DC /* ScreenModule.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		8D6CFF8922392D9D005C89DC /* LaunchProgressViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8D6CFF8A22392DC7005C89DC /* LaunchProgressViewController.swift */,
-			);
-			path = LaunchProgressViewController;
 			sourceTree = "<group>";
 		};
 		8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */ = {
@@ -334,7 +324,7 @@
 				99A1EB1DE739821150785C1D /* Main */,
 				99A1EF1187EF36DDCDF9C551 /* Resources */,
 				99A1E25431FACD5D4BFA2846 /* Managers */,
-				99A1ECF00BF67A33A20BBF3B /* ViewControllers */,
+				99A1ECF00BF67A33A20BBF3B /* Screens */,
 			);
 			path = Gorilla;
 			sourceTree = "<group>";
@@ -400,13 +390,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		99A1ECF00BF67A33A20BBF3B /* ViewControllers */ = {
+		99A1ECF00BF67A33A20BBF3B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				8D6CFF8922392D9D005C89DC /* LaunchProgressViewController */,
-				8D23C473221EE88B00DB4626 /* FeedViewController */,
+				8D23C473221EE88B00DB4626 /* Feed */,
 			);
-			path = ViewControllers;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		99A1ED1A9C866F5C964484EB /* Products */ = {
@@ -613,7 +602,6 @@
 				8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
 				8DDD47952231601A005F555D /* Result.swift in Sources */,
-				8D6CFF8B22392DC7005C89DC /* LaunchProgressViewController.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
