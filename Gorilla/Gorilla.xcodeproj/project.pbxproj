@@ -174,13 +174,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		8D0A6413223BD91000FDF4E1 /* PostImageFetcher */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PostImageFetcher;
-			sourceTree = "<group>";
-		};
 		8D0AC48D224233F600C251DD /* LowLevelWorkers */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +307,6 @@
 		8D6CFFA02239636F005C89DC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				8D0A6413223BD91000FDF4E1 /* PostImageFetcher */,
 				8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */,
 			);
 			path = Interactors;
