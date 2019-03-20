@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol FeedViewControllerPresenterOutputDelegate: AnyObject {
+protocol FeedViewControllerPresenterOutput: AnyObject {
     func displaySearchResults(_ searchResults: [FeedCollectionImageViewCellViewModel])
 }

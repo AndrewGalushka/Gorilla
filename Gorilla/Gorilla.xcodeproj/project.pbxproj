@@ -29,7 +29,7 @@
 		8D6CFF9322394B65005C89DC /* ImgurGallerySearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */; };
 		8D6CFF9622394D01005C89DC /* ImgurGallerySearchInteractorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */; };
 		8D6CFF9822395C8A005C89DC /* FeedViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */; };
-		8D6CFF9D22395D28005C89DC /* FeedViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */; };
+		8D6CFF9D22395D28005C89DC /* FeedViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */; };
 		8D6CFF9F22396039005C89DC /* FeedViewControllerPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterDelegate.swift */; };
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
@@ -95,7 +95,7 @@
 		8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchInteractor.swift; sourceTree = "<group>"; };
 		8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchInteractorType.swift; sourceTree = "<group>"; };
 		8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenter.swift; sourceTree = "<group>"; };
-		8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewOutput.swift; sourceTree = "<group>"; };
 		8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenterDelegate.swift; sourceTree = "<group>"; };
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
@@ -167,13 +167,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8D0882F2223A572B00BA7319 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		8D0AC48D224233F600C251DD /* LowLevelWorkers */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,10 +213,7 @@
 				8D6CFF8E2239406D005C89DC /* FeedModule.swift */,
 				8D6CFFA02239636F005C89DC /* Interactors */,
 				8D6CFF9922395CA0005C89DC /* Presenter */,
-				8D0882F2223A572B00BA7319 /* ViewModels */,
-				99A1E75E43A3A572158F11CE /* FeedViewController.swift */,
-				8D6CFF9C22395D28005C89DC /* FeedViewControllerDelegate.swift */,
-				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
+				8DC9C0112242A1A30046B413 /* View */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -310,6 +300,16 @@
 				8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8DC9C0112242A1A30046B413 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99A1E75E43A3A572158F11CE /* FeedViewController.swift */,
+				8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */,
+				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8DCEA48C2237F59500970A92 /* AppSettings */ = {
@@ -632,7 +632,7 @@
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
-				8D6CFF9D22395D28005C89DC /* FeedViewControllerDelegate.swift in Sources */,
+				8D6CFF9D22395D28005C89DC /* FeedViewOutput.swift in Sources */,
 				8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */,
 				8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */,
 				8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */,

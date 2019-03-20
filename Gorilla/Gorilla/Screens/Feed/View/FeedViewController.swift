@@ -147,7 +147,7 @@ extension FeedViewController: UISearchBarDelegate {
     }
 }
 
-extension FeedViewController: FeedViewControllerPresenterOutputDelegate {
+extension FeedViewController: FeedViewControllerPresenterOutput {
     
     func displaySearchResults(_ searchResults: [FeedCollectionImageViewCellViewModel]) {
         self.viewModels = searchResults
