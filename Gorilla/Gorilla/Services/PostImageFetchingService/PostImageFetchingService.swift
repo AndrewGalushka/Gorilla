@@ -13,13 +13,8 @@ class PostImageFetchingService {
     // MARK: - Properties(Public)
     
     var maxParallelFetching: Int {
-        get {
-            return operationQueue.maxConcurrentOperationCount
-        }
-        
-        set {
-            operationQueue.maxConcurrentOperationCount = newValue
-        }
+        get { return operationQueue.maxConcurrentOperationCount }
+        set { operationQueue.maxConcurrentOperationCount = newValue }
     }
     
     var maxLockTime: Double = 1.0

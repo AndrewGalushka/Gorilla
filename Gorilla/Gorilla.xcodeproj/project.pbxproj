@@ -193,7 +193,6 @@
 		8D0AC48F224234F300C251DD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8D0AC4922242354E00C251DD /* Base */,
 				8D0AC4902242352B00C251DD /* PostImageFetchingService */,
 			);
 			path = Services;
@@ -202,16 +201,9 @@
 		8D0AC4902242352B00C251DD /* PostImageFetchingService */ = {
 			isa = PBXGroup;
 			children = (
-				8DC9C01022424C730046B413 /* PostImageFetchingService */,
+				8D0A6414223BD93600FDF4E1 /* PostImageFetchingService.swift */,
 			);
 			path = PostImageFetchingService;
-			sourceTree = "<group>";
-		};
-		8D0AC4922242354E00C251DD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		8D1A42C22231120000EDD03A /* Search */ = {
@@ -318,14 +310,6 @@
 				8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8DC9C01022424C730046B413 /* PostImageFetchingService */ = {
-			isa = PBXGroup;
-			children = (
-				8D0A6414223BD93600FDF4E1 /* PostImageFetchingService.swift */,
-			);
-			path = PostImageFetchingService;
 			sourceTree = "<group>";
 		};
 		8DCEA48C2237F59500970A92 /* AppSettings */ = {
