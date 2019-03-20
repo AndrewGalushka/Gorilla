@@ -20,7 +20,7 @@ class FeedViewControllerPresenter {
     // MARK: Properties(Private)
     
     private var convertor = FeedViewControllerPresenterModelsConvertor()
-    private let postImageFetcher = PostImageFetcher()
+    private let postImageFetcher = PostImageFetchingService(imageFetcher: ImageFetcher())
 }
 
 extension FeedViewControllerPresenter: FeedViewControllerDelegate {

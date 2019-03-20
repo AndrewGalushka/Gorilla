@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		788CD5BB91B35ADFBC8291EA /* Pods_Gorilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6027435A53F9FF40CF4E2B2E /* Pods_Gorilla.framework */; };
 		8D0882F6223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */; };
-		8D0A6415223BD93600FDF4E1 /* PostImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */; };
+		8D0A6415223BD93600FDF4E1 /* PostImageFetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0A6414223BD93600FDF4E1 /* PostImageFetchingService.swift */; };
+		8D0AC49422423B5E00C251DD /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0AC49322423B5E00C251DD /* ImageFetcher.swift */; };
 		8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */; };
 		8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */; };
 		8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */; };
@@ -73,7 +74,8 @@
 		7D6FA0AB4F531E6AF6427CF7 /* Pods_GorillaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorillaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836D5C283965809B96BDF8B8 /* Pods-GorillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaTests/Pods-GorillaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenterModelsConvertor.swift; sourceTree = "<group>"; };
-		8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageFetcher.swift; sourceTree = "<group>"; };
+		8D0A6414223BD93600FDF4E1 /* PostImageFetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageFetchingService.swift; sourceTree = "<group>"; };
+		8D0AC49322423B5E00C251DD /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		8D1A42BE222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgurAPI+ImgurTargetConvertible.swift"; sourceTree = "<group>"; };
 		8D1A42C0222FDA4200EDD03A /* ImgurTargetConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurTargetConvertible.swift; sourceTree = "<group>"; };
 		8D23C47B221EEEA200DB4626 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
@@ -175,9 +177,48 @@
 		8D0A6413223BD91000FDF4E1 /* PostImageFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				8D0A6414223BD93600FDF4E1 /* PostImageFetcher.swift */,
 			);
 			path = PostImageFetcher;
+			sourceTree = "<group>";
+		};
+		8D0AC48D224233F600C251DD /* LowLevelWorkers */ = {
+			isa = PBXGroup;
+			children = (
+				8D0AC48E2242348000C251DD /* ImageFetcher */,
+			);
+			path = LowLevelWorkers;
+			sourceTree = "<group>";
+		};
+		8D0AC48E2242348000C251DD /* ImageFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				8D0AC49322423B5E00C251DD /* ImageFetcher.swift */,
+			);
+			path = ImageFetcher;
+			sourceTree = "<group>";
+		};
+		8D0AC48F224234F300C251DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D0AC4922242354E00C251DD /* Base */,
+				8D0AC4902242352B00C251DD /* PostImageFetchingService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D0AC4902242352B00C251DD /* PostImageFetchingService */ = {
+			isa = PBXGroup;
+			children = (
+				8DC9C01022424C730046B413 /* PostImageFetchingService */,
+			);
+			path = PostImageFetchingService;
+			sourceTree = "<group>";
+		};
+		8D0AC4922242354E00C251DD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		8D1A42C22231120000EDD03A /* Search */ = {
@@ -287,6 +328,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8DC9C01022424C730046B413 /* PostImageFetchingService */ = {
+			isa = PBXGroup;
+			children = (
+				8D0A6414223BD93600FDF4E1 /* PostImageFetchingService.swift */,
+			);
+			path = PostImageFetchingService;
+			sourceTree = "<group>";
+		};
 		8DCEA48C2237F59500970A92 /* AppSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +366,8 @@
 		99A1E3A2541574899EFE93D3 /* Gorilla */ = {
 			isa = PBXGroup;
 			children = (
+				8D0AC48F224234F300C251DD /* Services */,
+				8D0AC48D224233F600C251DD /* LowLevelWorkers */,
 				8D76851D22259D8100B6AC98 /* Models */,
 				8D6CFF8122390B76005C89DC /* Protocols */,
 				8D23C47A221EEE9000DB4626 /* Extensions */,
@@ -622,7 +673,7 @@
 				99A1EC974E554FD57895B91E /* ImgurAPI.swift in Sources */,
 				99A1ECD5B90ED421B871B8F9 /* ImgurAPIGallery.swift in Sources */,
 				8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */,
-				8D0A6415223BD93600FDF4E1 /* PostImageFetcher.swift in Sources */,
+				8D0A6415223BD93600FDF4E1 /* PostImageFetchingService.swift in Sources */,
 				8D6CFF8D22393AF0005C89DC /* CordinatorsFactory.swift in Sources */,
 				8D6CFF8F2239406D005C89DC /* FeedModule.swift in Sources */,
 				99A1E9A1E6812C59AEE84AD3 /* ImgurAPIGallerySearch.swift in Sources */,
@@ -636,6 +687,7 @@
 				8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */,
 				99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */,
 				99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */,
+				8D0AC49422423B5E00C251DD /* ImageFetcher.swift in Sources */,
 				8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */,
 				8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */,
 			);
