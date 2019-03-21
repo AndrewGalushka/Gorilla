@@ -15,7 +15,7 @@ class FeedViewController: UIViewController {
     
     // MARK: - Properties(Public)
     
-    weak var delegate: FeedViewControllerDelegate?
+    weak var delegate: FeedViewOutput?
     
     // MARK: - Properties(Public)
     
@@ -143,7 +143,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
 extension FeedViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.delegate?.feedViewController(self, didTapSearchText: searchBar.text)
+        self.delegate?.feedView(self, didTapSearchText: searchBar.text)
     }
 }
 

@@ -23,7 +23,7 @@ class FeedViewControllerPresenter {
     private let postImageFetcher = PostImageFetchingService(imageFetcher: ImageFetcher())
 }
 
-extension FeedViewControllerPresenter: FeedViewControllerDelegate {
+extension FeedViewControllerPresenter: FeedViewOutput {
   
     var feedCollectionViewImageViewCellViewModels: [FeedCollectionImageViewCellViewModel] {
         guard let searchInteractor = searchInteractor else { return [] }
@@ -60,7 +60,7 @@ extension FeedViewControllerPresenter: FeedViewControllerDelegate {
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
-    func feedViewController(_ feedViewController: FeedViewController, didTapSearchText searchQuery: String?) {
+    func feedView(_ feedViewController: FeedViewController, didTapSearchText searchQuery: String?) {
         guard let searchInteractor = searchInteractor else {
             return
         }
