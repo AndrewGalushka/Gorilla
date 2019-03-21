@@ -14,7 +14,7 @@ class FeedModule {
     private let searchInteractor: ImgurGallerySearchInteractor
     
     private init(serviceFactory: AppCoordinator.ServicesFactory) {
-        searchInteractor = ImgurGallerySearchInteractor(imgurRequestManager: serviceFactory.imgurRequestManager)
+        searchInteractor = ImgurGallerySearchInteractor(gallerySearchService: serviceFactory.gallerySearchService)
         presenter = FeedViewControllerPresenter()
         feedViewController = FeedViewController.instantiateFromStoryboard()
         

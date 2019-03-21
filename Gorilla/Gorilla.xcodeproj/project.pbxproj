@@ -34,6 +34,8 @@
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
+		8DCDB1C522439208009F5F06 /* ImgurGallerySearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1C422439208009F5F06 /* ImgurGallerySearchService.swift */; };
+		8DCDB1C7224392C6009F5F06 /* ImgurGallerySearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1C6224392C6009F5F06 /* ImgurGallerySearchServiceType.swift */; };
 		8DCEA48B2237F42E00970A92 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48A2237F42E00970A92 /* AppSettings.swift */; };
 		8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */; };
 		8DCFD9D6222EE1BA00F83C1B /* ImgurRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */; };
@@ -100,6 +102,8 @@
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
+		8DCDB1C422439208009F5F06 /* ImgurGallerySearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchService.swift; sourceTree = "<group>"; };
+		8DCDB1C6224392C6009F5F06 /* ImgurGallerySearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchServiceType.swift; sourceTree = "<group>"; };
 		8DCEA48A2237F42E00970A92 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		8DCEA48D2237FAE000970A92 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
 		8DCFD9D5222EE1BA00F83C1B /* ImgurRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurRequestManager.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		8D0AC48F224234F300C251DD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8DCDB1C3224391D7009F5F06 /* ImgurGallerySearchService */,
 				8D0AC4902242352B00C251DD /* PostImageFetchingService */,
 			);
 			path = Services;
@@ -267,15 +272,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */,
-				8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */,
-			);
-			path = ImgurGallerySearchInteractor;
-			sourceTree = "<group>";
-		};
 		8D6CFF9922395CA0005C89DC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +285,8 @@
 		8D6CFFA02239636F005C89DC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				8D6CFF9422394B6A005C89DC /* ImgurGallerySearchInteractor */,
+				8D6CFF9222394B65005C89DC /* ImgurGallerySearchInteractor.swift */,
+				8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -310,6 +307,15 @@
 				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8DCDB1C3224391D7009F5F06 /* ImgurGallerySearchService */ = {
+			isa = PBXGroup;
+			children = (
+				8DCDB1C422439208009F5F06 /* ImgurGallerySearchService.swift */,
+				8DCDB1C6224392C6009F5F06 /* ImgurGallerySearchServiceType.swift */,
+			);
+			path = ImgurGallerySearchService;
 			sourceTree = "<group>";
 		};
 		8DCEA48C2237F59500970A92 /* AppSettings */ = {
@@ -628,6 +634,7 @@
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
 				8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */,
 				99A1E3E21A1D7055C4C1540D /* AppDelegate.swift in Sources */,
+				8DCDB1C522439208009F5F06 /* ImgurGallerySearchService.swift in Sources */,
 				8DDD47952231601A005F555D /* Result.swift in Sources */,
 				8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */,
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
@@ -663,6 +670,7 @@
 				8DCEA48E2237FAE000970A92 /* MainFlowCoordinator.swift in Sources */,
 				99A1E8060A6D828624F430A7 /* TargetConvertible.swift in Sources */,
 				99A1EB6AD6709E3E4CFE4C45 /* CredentialProvideable.swift in Sources */,
+				8DCDB1C7224392C6009F5F06 /* ImgurGallerySearchServiceType.swift in Sources */,
 				8D0AC49422423B5E00C251DD /* ImageFetcher.swift in Sources */,
 				8D6CFF8822391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift in Sources */,
 				8D6CFF8522390DF0005C89DC /* UIStoryboard+ViewControllerInstantiation.swift in Sources */,

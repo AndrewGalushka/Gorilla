@@ -57,6 +57,7 @@ extension AppCoordinator {
         // MARK: - Properties(Public)
         
         let imgurRequestManager: ImgurRequestManager
+        let gallerySearchService: ImgurGallerySearchServiceType
         
         // MARK: - Properties(Private)
         
@@ -67,6 +68,7 @@ extension AppCoordinator {
         fileprivate init(appSettings: AppSettings) {
             self.appSettings = appSettings
             self.imgurRequestManager = ImgurRequestManager(clientID: appSettings.imgur.clientID)
+            self.gallerySearchService = ImgurGallerySearchService(imgurRequestManager: imgurRequestManager)
         }
     }
 }
