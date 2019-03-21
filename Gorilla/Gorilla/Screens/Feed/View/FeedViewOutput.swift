@@ -9,7 +9,6 @@
 import UIKit
 
 protocol FeedViewOutput: AnyObject {
-    var feedCollectionViewImageViewCellViewModels: [FeedCollectionImageViewCellViewModel] { get }
     func feedView(_ feedViewController: FeedViewController, didTapSearchText: String?)
     func itemSize(for imageViewCellViewModel: FeedCollectionImageViewCellViewModel, in collectionView: UICollectionView, style: FeedViewController.CollectionViewLayoutType) -> CGSize
     func willDisplay(_ imageViewModel: FeedCollectionImageViewCellViewModel)

@@ -24,13 +24,6 @@ class FeedViewControllerPresenter {
 }
 
 extension FeedViewControllerPresenter: FeedViewOutput {
-  
-    var feedCollectionViewImageViewCellViewModels: [FeedCollectionImageViewCellViewModel] {
-        guard let searchInteractor = searchInteractor else { return [] }
-        
-        return self.convertor.convert(searchResults: searchInteractor.lastSearchingResults)
-    }
-    
     func itemSize(for imageViewCellViewModel: FeedCollectionImageViewCellViewModel, in collectionView: UICollectionView, style: FeedViewController.CollectionViewLayoutType) -> CGSize {
         
         guard

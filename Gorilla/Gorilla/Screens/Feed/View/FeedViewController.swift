@@ -24,13 +24,6 @@ class FeedViewController: UIViewController {
     
     private var viewModels = [FeedCollectionImageViewCellViewModel]()
     
-    private var imageDownloadingDispatchQueue: OperationQueue {
-        let dispatchQueue = OperationQueue()
-        dispatchQueue.maxConcurrentOperationCount = 5
-        
-        return dispatchQueue
-    }
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
