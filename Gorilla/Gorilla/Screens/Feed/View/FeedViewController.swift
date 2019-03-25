@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     private var searchController: UISearchController?
     
-    private var viewModels = [FeedCollectionImageViewCellViewModel]()
+    private var dataSource = DataSource<FeedCollectionImageViewCellViewModel>(sections: [])
     
     // MARK: - Lifecycle
     
@@ -88,19 +88,21 @@ class FeedViewController: UIViewController {
 }
 
 extension FeedViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModels.count
+        return dataSource.numberOfItems(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath) as! FeedCollectionImageViewCell
-        cell.configure(viewModel: viewModels[indexPath.row])
+        cell.configure(viewModel: dataSource.item(at: indexPath))
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        self.delegate?.willDisplay(viewModels[indexPath.row])
+        let item = dataSource.item(at: indexPath)
+        self.delegate?.willDisplay(item)
     }
 }
 
@@ -128,7 +130,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let delegate = delegate else { return CGSize.zero }
         
-        let viewModel = self.viewModels[indexPath.row]
+        let viewModel = dataSource.item(at: indexPath)
         return delegate.itemSize(for: viewModel, in: collectionView, style: self.currentLayoutType)
     }
 }
@@ -143,7 +145,8 @@ extension FeedViewController: UISearchBarDelegate {
 extension FeedViewController: FeedViewControllerPresenterOutput {
     
     func displaySearchResults(_ searchResults: [FeedCollectionImageViewCellViewModel]) {
-        self.viewModels = searchResults
+    
+        dataSource.sections = [.init(items: searchResults)]
         self.collectionView.reloadData()
     }
 }
