@@ -32,8 +32,10 @@ class ImgurGallerySearchInteractor: ImgurGallerySearchInteractorType {
         self.gallerySearchService.search(by: params) { (response) in
             switch response {
             case .success(let gallerySearchResult):
+                self.lastSearchingResults = gallerySearchResult.posts
                 competion(.success(gallerySearchResult.posts))
             case .failure(let error):
+                self.lastSearchingResults = []
                 competion(.failure(error))
             }
         }
