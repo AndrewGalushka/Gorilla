@@ -35,6 +35,8 @@
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
 		8DB5DC75222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */; };
 		8DC9EEE722491928002E9791 /* CollectionViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9EEE622491928002E9791 /* CollectionViewCellConfigurator.swift */; };
+		8DC9EEE9224920BA002E9791 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9EEE8224920BA002E9791 /* DataSource.swift */; };
+		8DC9EEEB22492146002E9791 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9EEEA22492146002E9791 /* Section.swift */; };
 		8DCDB1C522439208009F5F06 /* ImgurGallerySearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1C422439208009F5F06 /* ImgurGallerySearchService.swift */; };
 		8DCDB1C7224392C6009F5F06 /* ImgurGallerySearchServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCDB1C6224392C6009F5F06 /* ImgurGallerySearchServiceType.swift */; };
 		8DCEA48B2237F42E00970A92 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCEA48A2237F42E00970A92 /* AppSettings.swift */; };
@@ -104,6 +106,8 @@
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
 		8DB5DC74222FBC4100D3DB00 /* ImgurAuthenticationPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAuthenticationPlugin.swift; sourceTree = "<group>"; };
 		8DC9EEE622491928002E9791 /* CollectionViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellConfigurator.swift; sourceTree = "<group>"; };
+		8DC9EEE8224920BA002E9791 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8DC9EEEA22492146002E9791 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		8DCDB1C422439208009F5F06 /* ImgurGallerySearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchService.swift; sourceTree = "<group>"; };
 		8DCDB1C6224392C6009F5F06 /* ImgurGallerySearchServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchServiceType.swift; sourceTree = "<group>"; };
 		8DCEA48A2237F42E00970A92 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -267,7 +271,7 @@
 		8D6CFF8122390B76005C89DC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8DC9EEE52249186D002E9791 /* CollectionViewCellConfigurator */,
+				8DC9EEE52249186D002E9791 /* CollectionView */,
 				8D6CFF7F22390AEB005C89DC /* InterfaceBuilderIdentifiable.swift */,
 				8D6CFF7D2239098E005C89DC /* StoryboardInstantiatable.swift */,
 				8D6CFF90223941B8005C89DC /* ScreenModule.swift */,
@@ -312,12 +316,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8DC9EEE52249186D002E9791 /* CollectionViewCellConfigurator */ = {
+		8DC9EEE52249186D002E9791 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				8DC9EEEA22492146002E9791 /* Section.swift */,
+				8DC9EEE8224920BA002E9791 /* DataSource.swift */,
 				8DC9EEE622491928002E9791 /* CollectionViewCellConfigurator.swift */,
 			);
-			path = CollectionViewCellConfigurator;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		8DCDB1C3224391D7009F5F06 /* ImgurGallerySearchService */ = {
@@ -651,8 +657,10 @@
 				8D23C47F221EF23600DB4626 /* FeedCollectionImageViewCell.swift in Sources */,
 				8D23C47C221EEEA200DB4626 /* UIColor+Random.swift in Sources */,
 				8D6CFF9D22395D28005C89DC /* FeedViewOutput.swift in Sources */,
+				8DC9EEEB22492146002E9791 /* Section.swift in Sources */,
 				8D6CFF8022390AEB005C89DC /* InterfaceBuilderIdentifiable.swift in Sources */,
 				8D1A42C1222FDA4200EDD03A /* ImgurTargetConvertible.swift in Sources */,
+				8DC9EEE9224920BA002E9791 /* DataSource.swift in Sources */,
 				8D6CFF7C223908AC005C89DC /* UIStoryboard+StoryboardTypes.swift in Sources */,
 				99A1E9EFFCEE3276D223EAAE /* JSONDecodable.swift in Sources */,
 				8D6CFF8322390BAC005C89DC /* InterfaceBuilderIdentifiable+UIViewController.swift in Sources */,
