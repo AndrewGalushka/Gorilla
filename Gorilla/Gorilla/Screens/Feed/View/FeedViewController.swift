@@ -19,7 +19,7 @@ class FeedViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     private var searchController: UISearchController?
     
-    private var collectionDataSourceController: CollectionViewDataSourceController<FeedCollectionImageViewCellViewModel>!
+    private var collectionDataSourceController: CollectionViewDataSource<FeedCollectionImageViewCellViewModel>!
     
     // MARK: - Lifecycle
     
@@ -58,7 +58,7 @@ class FeedViewController: UIViewController {
         
         let anyConfigurator = AnyCollectionViewCellConfigurator<FeedCollectionImageViewCellViewModel>(imageViewCellConfigurator)
         
-        self.collectionDataSourceController = CollectionViewDataSourceController<FeedCollectionImageViewCellViewModel>(dataSource: .init(sections: [.init(items: [])]),
+        self.collectionDataSourceController = CollectionViewDataSource<FeedCollectionImageViewCellViewModel>(dataSource: .init(sections: [.init(items: [])]),
                                                                                                                        configurator: anyConfigurator)
         
         collectionView.setCollectionViewLayout(self.plainLayout, animated: false)

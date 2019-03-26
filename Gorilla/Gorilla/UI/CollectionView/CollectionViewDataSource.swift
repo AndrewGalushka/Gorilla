@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewDataSourceController<Item>: NSObject, UICollectionViewDataSource {
+class CollectionViewDataSource<Item>: NSObject, UICollectionViewDataSource {
     var dataSource: DataSource<Item>
     var configurator: AnyCollectionViewCellConfigurator<Item>
     
