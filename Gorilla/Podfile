@@ -1,20 +1,41 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '12.1'
 
-target 'Gorilla' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
+def architecure
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'Kingfisher'
   pod 'Moya'
+end
+
+target 'Gorilla' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+  
+  architecure
   
   # Pods for Gorilla
 
-  target 'GorillaTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+#  target 'GorillaTests' do
+#    inherit! :search_paths
+#     Pods for testing
+#  end
 
+end
+
+post_install do |installer_representation|
+  
+  #Target settings update
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
+  end
+  
+  #Project settings update
+  installer_representation.pods_project.build_configurations.each do |config|
+    config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
+  end
+  
 end
