@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import Moya
-import Kingfisher
 
 class FeedViewController: UIViewController {
     

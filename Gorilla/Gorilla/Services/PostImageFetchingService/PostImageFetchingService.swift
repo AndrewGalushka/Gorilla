@@ -6,7 +6,7 @@
 //  Copyright © 2019 Galushka.com. All rights reserved.
 //
 
-import Kingfisher
+import UIKit
 
 class PostImageFetchingService {
     
