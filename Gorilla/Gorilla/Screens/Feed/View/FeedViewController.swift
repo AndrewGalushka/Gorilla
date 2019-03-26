@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     private var searchController: UISearchController?
     
-    private var dataSource = DataSource<FeedCollectionImageViewCellViewModel>(sections: [])
+    private var collectionDataSourceController: CollectionViewDataSourceController<FeedCollectionImageViewCellViewModel>!
     
     // MARK: - Lifecycle
     
@@ -53,10 +53,22 @@ class FeedViewController: UIViewController {
     }
     
     private func configureCollectionView() {
+        let imageViewCellConfigurator = CollectionViewCellConfigurator<FeedCollectionImageViewCellViewModel, FeedCollectionImageViewCell>.init { (cell, item, collectionView, indexPath) -> FeedCollectionImageViewCell in
+            cell.configure(viewModel: item)
+            
+            return cell
+        }
+        
+        let anyConfigurator = AnyCollectionViewCellConfigurator<FeedCollectionImageViewCellViewModel>(imageViewCellConfigurator)
+        
+        self.collectionDataSourceController = CollectionViewDataSourceController<FeedCollectionImageViewCellViewModel>(dataSource: .init(sections: [.init(items: [])]),
+                                                                                                                       configurator: anyConfigurator)
+        
         collectionView.setCollectionViewLayout(self.plainLayout, animated: false)
-        collectionView.dataSource = self
+        collectionView.dataSource = collectionDataSourceController
         collectionView.delegate = self
-        collectionView.register(FeedCollectionImageViewCell.nib, forCellWithReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier)
+        
+        collectionDataSourceController.registerCells(in: collectionView)
     }
     
     // MARK: - CollectionView Layout
@@ -87,26 +99,12 @@ class FeedViewController: UIViewController {
     }
 }
 
-extension FeedViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.numberOfItems(in: section)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionImageViewCell.reuseIdentifier, for: indexPath) as! FeedCollectionImageViewCell
-        cell.configure(viewModel: dataSource.item(at: indexPath))
-        
-        return cell
-    }
+extension FeedViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        let item = dataSource.item(at: indexPath)
+        let item = self.collectionDataSourceController.dataSource.item(at: indexPath)
         self.delegate?.willDisplay(item)
     }
-}
-
-extension FeedViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -130,7 +128,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let delegate = delegate else { return CGSize.zero }
         
-        let viewModel = dataSource.item(at: indexPath)
+        let viewModel = self.collectionDataSourceController.dataSource.item(at: indexPath)
         return delegate.itemSize(for: viewModel, in: collectionView, style: self.currentLayoutType)
     }
 }
@@ -146,7 +144,7 @@ extension FeedViewController: FeedViewControllerPresenterOutput {
     
     func displaySearchResults(_ searchResults: [FeedCollectionImageViewCellViewModel]) {
     
-        dataSource.sections = [.init(items: searchResults)]
+        self.collectionDataSourceController.dataSource.sections = [.init(items: searchResults)]
         self.collectionView.reloadData()
     }
 }
