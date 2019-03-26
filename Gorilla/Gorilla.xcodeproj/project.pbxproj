@@ -409,12 +409,11 @@
 		99A1EA4C60ADCDB9CB022BC3 = {
 			isa = PBXGroup;
 			children = (
-				99A1ED1A9C866F5C964484EB /* Products */,
 				99A1E3A2541574899EFE93D3 /* Gorilla */,
-				99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */,
 				99A1E83370F4B87B629973BD /* GorillaTests */,
 				575ACA5D3CA84692CF27632F /* Pods */,
 				047FD89CA1DC8505E0802AC9 /* Frameworks */,
+				99A1ED1A9C866F5C964484EB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -472,6 +471,7 @@
 		99A1EF1187EF36DDCDF9C551 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				99A1E150CB3A38516BCF07BB /* Gorilla.xcdatamodeld */,
 				8D54083F221DA79E0022C161 /* Info.plist */,
 				99A1EBB5AC76538AA7CD2EC5 /* Assets.xcassets */,
 				99A1E0C84B8AA6F747D367F4 /* LaunchScreen.storyboard */,
@@ -936,7 +936,8 @@
 				99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */,
 			);
 			currentVersion = 99A1E10DE28AAA6CE4401C58 /* Gorilla.xcdatamodel */;
-			path = Gorilla.xcdatamodeld;
+			name = Gorilla.xcdatamodeld;
+			path = ../../Gorilla.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
