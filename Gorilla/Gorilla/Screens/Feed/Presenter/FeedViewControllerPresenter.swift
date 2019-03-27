@@ -14,7 +14,7 @@ class FeedViewControllerPresenter {
     // MARK: Properties(Public)
     
     weak var searchInteractor: ImgurGallerySearchInteractorType?
-    weak var view: FeedViewControllerPresenterOutput?
+    weak var view: FeedViewInput?
     
     // MARK: Properties(Private)
     

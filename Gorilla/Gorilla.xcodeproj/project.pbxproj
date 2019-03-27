@@ -30,7 +30,7 @@
 		8D6CFF9622394D01005C89DC /* ImgurGallerySearchInteractorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */; };
 		8D6CFF9822395C8A005C89DC /* FeedViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */; };
 		8D6CFF9D22395D28005C89DC /* FeedViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */; };
-		8D6CFF9F22396039005C89DC /* FeedViewControllerPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterOutput.swift */; };
+		8D6CFF9F22396039005C89DC /* FeedViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFF9E22396039005C89DC /* FeedViewInput.swift */; };
 		8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */; };
 		8D90735A224A1D2D00AB7ED5 /* AnyCollectionViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D907359224A1D2D00AB7ED5 /* AnyCollectionViewCellConfigurator.swift */; };
 		8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB579452236A30200C18F91 /* CGSize+Aspect.swift */; };
@@ -100,7 +100,7 @@
 		8D6CFF9522394D01005C89DC /* ImgurGallerySearchInteractorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallerySearchInteractorType.swift; sourceTree = "<group>"; };
 		8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenter.swift; sourceTree = "<group>"; };
 		8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewOutput.swift; sourceTree = "<group>"; };
-		8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerPresenterOutput.swift; sourceTree = "<group>"; };
+		8D6CFF9E22396039005C89DC /* FeedViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewInput.swift; sourceTree = "<group>"; };
 		8D76851E22259D9200B6AC98 /* ImgureGallerySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgureGallerySearchResult.swift; sourceTree = "<group>"; };
 		8D907359224A1D2D00AB7ED5 /* AnyCollectionViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewCellConfigurator.swift; sourceTree = "<group>"; };
 		8DB579452236A30200C18F91 /* CGSize+Aspect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Aspect.swift"; sourceTree = "<group>"; };
@@ -282,7 +282,6 @@
 			children = (
 				8D0882F5223A96F900BA7319 /* FeedViewControllerPresenterModelsConvertor.swift */,
 				8D6CFF9722395C8A005C89DC /* FeedViewControllerPresenter.swift */,
-				8D6CFF9E22396039005C89DC /* FeedViewControllerPresenterOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -309,6 +308,7 @@
 			children = (
 				99A1E75E43A3A572158F11CE /* FeedViewController.swift */,
 				8D6CFF9C22395D28005C89DC /* FeedViewOutput.swift */,
+				8D6CFF9E22396039005C89DC /* FeedViewInput.swift */,
 				8D6CFF8722391319005C89DC /* FeedViewController+StoryboardInstantiatable.swift */,
 			);
 			path = View;
@@ -657,7 +657,7 @@
 				8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */,
 				8DDA2862222E847200247E05 /* ImgurTarget.swift in Sources */,
 				8D76851F22259D9200B6AC98 /* ImgureGallerySearchResult.swift in Sources */,
-				8D6CFF9F22396039005C89DC /* FeedViewControllerPresenterOutput.swift in Sources */,
+				8D6CFF9F22396039005C89DC /* FeedViewInput.swift in Sources */,
 				8D1A42BF222FD9A300EDD03A /* ImgurAPI+ImgurTargetConvertible.swift in Sources */,
 				99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */,
 				8D6CFF7E2239098E005C89DC /* StoryboardInstantiatable.swift in Sources */,
