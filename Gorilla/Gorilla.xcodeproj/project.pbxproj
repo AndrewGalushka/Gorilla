@@ -49,6 +49,7 @@
 		8DDD4799223163E1005F555D /* SimpleJSONDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */; };
 		8DE9004E224BCF2E00071DFF /* FeedCollectionViewPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE9004D224BCF2E00071DFF /* FeedCollectionViewPresentor.swift */; };
 		8DE90052224BCF8D00071DFF /* FeedCollectionViewPresentorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE90051224BCF8D00071DFF /* FeedCollectionViewPresentorInput.swift */; };
+		8DE90054224BDA9700071DFF /* FeedCollectionViewPresentorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE90053224BDA9700071DFF /* FeedCollectionViewPresentorOutput.swift */; };
 		8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E25221D94130037C19B /* AppCoordinator.swift */; };
 		8DF59E28221D94130037C19B /* AppCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59E26221D94130037C19B /* AppCoordinatorType.swift */; };
 		99A1E33A1F75E8940BF330A8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1E75E43A3A572158F11CE /* FeedViewController.swift */; };
@@ -121,6 +122,7 @@
 		8DDD4798223163E1005F555D /* SimpleJSONDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJSONDataMapper.swift; sourceTree = "<group>"; };
 		8DE9004D224BCF2E00071DFF /* FeedCollectionViewPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewPresentor.swift; sourceTree = "<group>"; };
 		8DE90051224BCF8D00071DFF /* FeedCollectionViewPresentorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewPresentorInput.swift; sourceTree = "<group>"; };
+		8DE90053224BDA9700071DFF /* FeedCollectionViewPresentorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewPresentorOutput.swift; sourceTree = "<group>"; };
 		8DF59E25221D94130037C19B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		8DF59E26221D94130037C19B /* AppCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorType.swift; sourceTree = "<group>"; };
 		9222F2CED78881D018D1A98B /* Pods-Gorilla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gorilla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gorilla/Pods-Gorilla.debug.xcconfig"; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				8DE9004D224BCF2E00071DFF /* FeedCollectionViewPresentor.swift */,
 				8DE90051224BCF8D00071DFF /* FeedCollectionViewPresentorInput.swift */,
+				8DE90053224BDA9700071DFF /* FeedCollectionViewPresentorOutput.swift */,
 			);
 			path = Presentor;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE90054224BDA9700071DFF /* FeedCollectionViewPresentorOutput.swift in Sources */,
 				8DF59E27221D94130037C19B /* AppCoordinator.swift in Sources */,
 				99A1E34DCC1950CC517858FA /* Gorilla.xcdatamodeld in Sources */,
 				8DB579462236A30200C18F91 /* CGSize+Aspect.swift in Sources */,

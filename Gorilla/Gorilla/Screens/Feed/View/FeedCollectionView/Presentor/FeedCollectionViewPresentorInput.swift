@@ -9,4 +9,6 @@
 import UIKit
 
 protocol FeedCollectionViewPresentorInput: AnyObject {
+    func attach(to: UICollectionView)
+    var output: FeedCollectionViewPresentorOutput? { get set }
 }

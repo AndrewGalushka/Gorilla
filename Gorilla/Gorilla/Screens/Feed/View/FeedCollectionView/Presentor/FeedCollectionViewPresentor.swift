@@ -10,9 +10,22 @@ import UIKit
 
 class FeedCollectionViewPresentor: FeedCollectionViewPresentorInput {
     
-    private typealias CellViewModel = FeedCollectionImageViewCellViewModel
+    // MARK: Properties(Public)
+    
+    weak var output: FeedCollectionViewPresentorOutput?
+    
+    // MARK: Properties(Private)
+    
+    private lazy var dataSource: CollectionViewDataSource<CellViewModel> = self.makeDataSource()
+    
+    // MARK: Methods(Public)
+    
+    func attach(to: UICollectionView) {
+    }
     
     // MARK: Methods(Private)
+    
+    private typealias CellViewModel = FeedCollectionImageViewCellViewModel
     
     private func makeDataSource() -> CollectionViewDataSource<CellViewModel> {
         let configurator = self.makeConfigurator()
