@@ -11,6 +11,14 @@ import Foundation
 struct DataSource<Item> {
     var sections: [Section<Item>]
     
+    init(sections: [Section<Item>]) {
+        self.sections = sections
+    }
+    
+    init() {
+        self.sections = []
+    }
+    
     func numberOfSections() -> Int {
         return sections.count
     }
